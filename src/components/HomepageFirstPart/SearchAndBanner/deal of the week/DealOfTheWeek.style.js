@@ -7,8 +7,10 @@ object-fit: contain;
 export const DotdTitle = styled.div`
 font-size: 1.125rem;
 font-weight: 500;
-color: ${props => props.theme.color.secondary};
-padding-bottom: 10px;
+color: ${props => props.theme.color.invertedPrimary};
+padding: 5px 0;
+text-align: center;
+background-color: ${props => props.theme.color.invertedBg};
 `
 export const DotdProductContainer = styled.div`
 padding: 10px 20px;

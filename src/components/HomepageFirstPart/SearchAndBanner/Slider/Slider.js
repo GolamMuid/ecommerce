@@ -13,7 +13,7 @@ export default function Slider() {
                 spaceBetween={300}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 2000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 }}
                 pagination={{
@@ -46,7 +46,7 @@ export default function Slider() {
                                     $1200.00
                                 </SliderTextOldPrice>
                                 <SliderTextNewPrice>
-                                    $600.002
+                                    $600.00
                                 </SliderTextNewPrice>
                             </SliderTextPrice>
                             <SliderBuyButton>

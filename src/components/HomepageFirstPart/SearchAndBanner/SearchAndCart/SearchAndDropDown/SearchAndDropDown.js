@@ -4,27 +4,28 @@ import { IoIosArrowDown } from 'react-icons/io'
 
 function SearchAndDropDown() {
 
-    const [expanded, setExpanded] = useState(true);
+    // const [expanded, setExpanded] = useState(true);
 
-    function handleExpansion() {
-        expanded ? setExpanded(false) : setExpanded(true);
-    }
+    // function handleExpansion() {
+    //     expanded ? setExpanded(false) : setExpanded(true);
+    // }
 
     return (
         <SearchAndDropDownContainer>
             <DropDownContainer>
-                <CategorySelectDropDown onClick={handleExpansion}>
+                <CategorySelectDropDown>
                     All Categories &nbsp; <IoIosArrowDown />
+
+                    <CategorySelectOptionContainer>
+                        <CategorySelectOptionItems> Option </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Option </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Option </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Option </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Option </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Option </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Option </CategorySelectOptionItems>
+                    </CategorySelectOptionContainer>
                 </CategorySelectDropDown>
-                <CategorySelectOptionContainer style={expanded ? { display: 'none' } : { display: 'block' }} >
-                    <CategorySelectOptionItems> Option </CategorySelectOptionItems>
-                    <CategorySelectOptionItems> Option </CategorySelectOptionItems>
-                    <CategorySelectOptionItems> Option </CategorySelectOptionItems>
-                    <CategorySelectOptionItems> Option </CategorySelectOptionItems>
-                    <CategorySelectOptionItems> Option </CategorySelectOptionItems>
-                    <CategorySelectOptionItems> Option </CategorySelectOptionItems>
-                    <CategorySelectOptionItems> Option </CategorySelectOptionItems>
-                </CategorySelectOptionContainer>
             </DropDownContainer>
             <SearchContainer>
                 <SearchBox placeholder='What do you need?' />

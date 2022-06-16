@@ -1,14 +1,15 @@
 import React from "react";
-import LeftSideBar from "../../components/users_backend/LeftSideBar/LeftSideBar";
-import { Name } from "../../components/users_backend/LeftSideBar/LeftSideBar.style";
-import { PartCotainer } from "../profile/Profile.style";
+import UserBlankSpace from "../../components/users_backend/UserBlankSpace/UserBlankSpace";
+import UserNavbar from "../../components/users_backend/UserNavbar/UserNavbar";
+import UserOrder from "../../components/users_backend/UserOrder/UserOrder/UserOrder";
 
 function Order() {
   return (
-    <PartCotainer>
-      <LeftSideBar></LeftSideBar>
-      <Name>this is your order</Name>
-    </PartCotainer>
+    <>
+      <UserNavbar />
+      <UserBlankSpace />
+      <UserOrder />
+    </>
   );
 }
 

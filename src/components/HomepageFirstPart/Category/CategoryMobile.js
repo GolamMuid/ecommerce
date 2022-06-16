@@ -4,7 +4,10 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { MdComputer, MdHeadphones } from 'react-icons/md'
 import { FiMonitor, FiCamera, } from 'react-icons/fi'
 import { GoDeviceMobile } from 'react-icons/go'
-import { GiHamburgerMenu } from 'react-icons/gi'
+import { GiHamburgerMenu, GiLipstick } from 'react-icons/gi'
+import { FaTshirt } from 'react-icons/fa'
+import { BsMusicNoteBeamed, BsLightningCharge, BsSunglasses } from 'react-icons/bs'
+
 
 function CategoryMobile() {
     const [categoryExpanded, setCategoryExpanded] = useState(false)
@@ -71,6 +74,11 @@ function CategoryMobile() {
                 <CategoryItem> <FiCamera /> Camera and Photography </CategoryItem>
                 <CategoryItem> <MdHeadphones /> Headphones </CategoryItem>
                 <CategoryItem> <GoDeviceMobile /> Smartphone and Tablet </CategoryItem>
+                <CategoryItem> <BsMusicNoteBeamed /> Musical Instruments </CategoryItem>
+                <CategoryItem> <BsLightningCharge /> Accessories </CategoryItem>
+                <CategoryItem> <FaTshirt /> Clothing </CategoryItem>
+                <CategoryItem> <GiLipstick /> Personal </CategoryItem>
+                <CategoryItem> <BsSunglasses /> Fashion </CategoryItem>
             </CategoryMenuContainer>
         </CategoryContainer>
     )

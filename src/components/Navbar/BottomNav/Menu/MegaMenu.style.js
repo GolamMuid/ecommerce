@@ -15,20 +15,24 @@ transition: all 0.3s ease-in-out;
 `
 
 export const MegaMenucontainer = styled.div`
-width: 110vh ;
+width: 160vh ;
 padding: 10px;
 position: absolute;
 left: 0;
 margin-top: 25px ;
-background-color: ${props => props.theme.color.bgSecondary};
+box-shadow: 10px 10px 18px 4px rgba(0,0,0,0.4);
+border-radius: 0 0 6px 6px;
+border: solid 2px ${props => props.theme.color.borderPrimary};
+background-color: ${props => props.theme.color.bgQuaternary};
 display: none;
 ${MegaMenuTitle}:hover &{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 `
 
 export const MegaMenuSub = styled.div`
-flex-basis: 50%;
+padding: 10px;
 `
 export const MegaMenuSubTitle = styled.div`
 font-size: 0.875rem;

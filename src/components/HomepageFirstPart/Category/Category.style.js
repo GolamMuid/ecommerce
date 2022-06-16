@@ -60,24 +60,29 @@ display: none;
 transition: all 0.3s ease;
 z-index: 10;
 padding: 10px;
-background-color: ${props => props.theme.color.bgSecondary};
+background-color: #F5F5F5;
+border-radius: 6px;
+border: solid 1px ${props => props.theme.color.borderPrimary};
+box-shadow: 10px 10px 18px 4px rgba(0,0,0,0.4);
 ${SubMenuItem}:hover & {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
+    row-gap: 40px;
     width: fit-content;
     z-index: 10;
+    width: calc(100vw - 30%) ;
 }
 `
 export const CategoryMegaMenuColumns = styled.div`
-/* padding: 10px; */
+padding-bottom: 10px;
 `
 export const CategoryMegaMenuTitle = styled.div`
 font-size: 0.875rem;
 font-weight: 500;
-padding: 12px 0px;
+padding: 10px 0px;
 text-transform: uppercase;
-color: ${props => props.theme.color.primary};
+color: ${props => props.theme.color.secondary};
 `
 export const CategoryMegaMenuItem = styled.div`
 font-size: 0.85rem;
@@ -89,5 +94,9 @@ text-transform: none;
 transition: all 0.2s ease;
 &:hover{
     transform: translateX(10px);
+}
+img{
+    max-height: 100px;
+    max-width: 100%;
 }
 `

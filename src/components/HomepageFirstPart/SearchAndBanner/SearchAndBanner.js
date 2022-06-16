@@ -4,7 +4,7 @@ import DealOfTheWeek from './deal of the week/DealOfTheWeek'
 import { SearchAndBannerContainer } from './SearchAndBanner.style'
 import SearchAndDropDown from './SearchAndCart/SearchAndDropDown/SearchAndDropDown'
 import WishlistCartCost from './SearchAndCart/WishlistCartCost/WishlistCartCost'
-import Slider from './Slider/Slider'
+import Slider from './slider/Slider'
 
 function SearchAndBanner() {
     return (

@@ -8,6 +8,7 @@ function LatestItems() {
             <LatestItemsTitle>
                 Latest Items
             </LatestItemsTitle>
+            <SeeMoreButton> See More </SeeMoreButton>
             <LatestItemsProductsContainer>
                 <LatestItemsProduct>
                     <LatestItemsProductImage>
@@ -118,7 +119,7 @@ function LatestItems() {
 
                 </LatestItemsProduct>
             </LatestItemsProductsContainer>
-            <SeeMoreButton> See More </SeeMoreButton>
+
         </LatestItemsContainer>
     )
 }

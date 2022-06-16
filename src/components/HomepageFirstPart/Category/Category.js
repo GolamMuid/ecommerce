@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import { ArrowContainer, CategoryContainer, CategoryItem, CategoryMegaMenu, CategoryMegaMenuColumns, CategoryMegaMenuItem, CategoryMegaMenuTitle, CategoryMenuContainer, CategoryTitle, SubMenuContainer, SubMenuItem, SubSubMenuContainer, SubSubMenuItem } from './Category.style'
 import { IoIosArrowDown } from 'react-icons/io'
 import { MdComputer, MdHeadphones } from 'react-icons/md'
+import { FaTshirt } from 'react-icons/fa'
 import { FiMonitor, FiCamera, } from 'react-icons/fi'
 import { GoDeviceMobile } from 'react-icons/go'
-import { GiHamburgerMenu } from 'react-icons/gi'
+import { GiHamburgerMenu, GiLipstick } from 'react-icons/gi'
+import { BsMusicNoteBeamed, BsLightningCharge, BsSunglasses } from 'react-icons/bs'
 
 function Category() {
     const [categoryExpanded, setCategoryExpanded] = useState(false)
@@ -42,27 +44,16 @@ function Category() {
                     <SubMenuItem>
                         Desktop
                         <CategoryMegaMenu>
-                            <CategoryMegaMenuColumns>
-                                <CategoryMegaMenuTitle>
-                                    Brands
-                                </CategoryMegaMenuTitle>
-
-                                <CategoryMegaMenuItem> ASUS </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> Lenovo </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> Dell </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> HP </CategoryMegaMenuItem>
-
-                            </CategoryMegaMenuColumns>
 
                             <CategoryMegaMenuColumns>
                                 <CategoryMegaMenuTitle>
                                     Components
                                 </CategoryMegaMenuTitle>
 
-                                <CategoryMegaMenuItem> Processor </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> Harddisk </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> Motherboard </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> Power Supply </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Processor </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Harddisk </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Motherboard </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Power Supply </CategoryMegaMenuItem>
 
                             </CategoryMegaMenuColumns>
 
@@ -71,11 +62,56 @@ function Category() {
                                     Types
                                 </CategoryMegaMenuTitle>
 
-                                <CategoryMegaMenuItem> Regular Desktop </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> All in one PC </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> Prebuilt PC </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> Server PC </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Regular Desktop </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - All in one PC </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Prebuilt PC </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Server PC </CategoryMegaMenuItem>
 
+                            </CategoryMegaMenuColumns>
+
+                            <CategoryMegaMenuColumns>
+                                <CategoryMegaMenuTitle>
+                                    Brands
+                                </CategoryMegaMenuTitle>
+
+                                <CategoryMegaMenuItem> - ASUS </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Lenovo </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Dell </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - HP </CategoryMegaMenuItem>
+
+                            </CategoryMegaMenuColumns>
+                            <CategoryMegaMenuColumns>
+                                <CategoryMegaMenuTitle>
+                                    Accessories
+                                </CategoryMegaMenuTitle>
+
+                                <CategoryMegaMenuItem> - Headphones </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Microphones </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Webcam </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - RGB LED Strip </CategoryMegaMenuItem>
+
+                            </CategoryMegaMenuColumns>
+                            <CategoryMegaMenuColumns>
+                                <CategoryMegaMenuTitle>
+                                    Pre built PC 1
+                                </CategoryMegaMenuTitle>
+                                <CategoryMegaMenuItem>
+                                    <img
+                                        src={`${process.env.PUBLIC_URL}/assets/images/Category Megamenu/pc1.png`}
+                                        alt=""
+                                    />
+                                </CategoryMegaMenuItem>
+                            </CategoryMegaMenuColumns>
+                            <CategoryMegaMenuColumns>
+                                <CategoryMegaMenuTitle>
+                                    Pre built PC 2
+                                </CategoryMegaMenuTitle>
+                                <CategoryMegaMenuItem>
+                                    <img
+                                        src={`${process.env.PUBLIC_URL}/assets/images/Category Megamenu/pc2.png`}
+                                        alt=""
+                                    />
+                                </CategoryMegaMenuItem>
                             </CategoryMegaMenuColumns>
                         </CategoryMegaMenu>
 
@@ -89,10 +125,10 @@ function Category() {
                                     Brands
                                 </CategoryMegaMenuTitle>
 
-                                <CategoryMegaMenuItem> ASUS </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> Lenovo </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> Dell </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> HP </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - ASUS </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Lenovo </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Dell </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - HP </CategoryMegaMenuItem>
 
                             </CategoryMegaMenuColumns>
 
@@ -101,9 +137,9 @@ function Category() {
                                     Category
                                 </CategoryMegaMenuTitle>
 
-                                <CategoryMegaMenuItem> Budget Laptop </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> Professional Laptop </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> Gaming Laptop </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Budget Laptop </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Professional Laptop </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Gaming Laptop </CategoryMegaMenuItem>
 
                             </CategoryMegaMenuColumns>
 
@@ -112,10 +148,45 @@ function Category() {
                                     Laptop Components
                                 </CategoryMegaMenuTitle>
 
-                                <CategoryMegaMenuItem> RAM </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> Storage </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> Charger </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - RAM </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Storage </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Charger </CategoryMegaMenuItem>
 
+                            </CategoryMegaMenuColumns>
+                            <CategoryMegaMenuColumns>
+                                <CategoryMegaMenuTitle>
+                                    Accessories
+                                </CategoryMegaMenuTitle>
+
+                                <CategoryMegaMenuItem> - Headphones </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Microphones </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - Webcam </CategoryMegaMenuItem>
+                                <CategoryMegaMenuItem> - RGB LED Strip </CategoryMegaMenuItem>
+
+                            </CategoryMegaMenuColumns>
+
+                            <CategoryMegaMenuColumns>
+                                <CategoryMegaMenuTitle>
+                                    Macbook Pro
+                                </CategoryMegaMenuTitle>
+                                <CategoryMegaMenuItem>
+                                    <img
+                                        src={`${process.env.PUBLIC_URL}/assets/images/Category Megamenu/macpro.png`}
+                                        alt=""
+                                    />
+                                </CategoryMegaMenuItem>
+                            </CategoryMegaMenuColumns>
+
+                            <CategoryMegaMenuColumns>
+                                <CategoryMegaMenuTitle>
+                                    Macbook Air
+                                </CategoryMegaMenuTitle>
+                                <CategoryMegaMenuItem>
+                                    <img
+                                        src={`${process.env.PUBLIC_URL}/assets/images/Category Megamenu/macair.png`}
+                                        alt=""
+                                    />
+                                </CategoryMegaMenuItem>
                             </CategoryMegaMenuColumns>
 
                         </CategoryMegaMenu>
@@ -128,6 +199,11 @@ function Category() {
                 <CategoryItem> <FiCamera /> Camera and Photography </CategoryItem>
                 <CategoryItem> <MdHeadphones />  Headphones </CategoryItem>
                 <CategoryItem> <GoDeviceMobile /> Smartphone and Tablet </CategoryItem>
+                <CategoryItem> <BsMusicNoteBeamed /> Musical Instruments </CategoryItem>
+                <CategoryItem> <BsLightningCharge /> Accessories </CategoryItem>
+                <CategoryItem> <FaTshirt /> Clothing </CategoryItem>
+                <CategoryItem> <GiLipstick /> Personal </CategoryItem>
+                <CategoryItem> <BsSunglasses /> Fashion </CategoryItem>
             </CategoryMenuContainer>
         </CategoryContainer >
     )

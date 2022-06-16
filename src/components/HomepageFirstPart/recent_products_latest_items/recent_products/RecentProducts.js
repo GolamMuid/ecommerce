@@ -8,6 +8,7 @@ function RecentProducts() {
             <RecentProductsTitle>
                 Recently Viewed Products
             </RecentProductsTitle>
+            <SeeMoreButton> See More </SeeMoreButton>
             <RecentProductsItemContainer>
                 <RecentProductsItem>
                     <RecentProductsImage>
@@ -281,7 +282,7 @@ function RecentProducts() {
                 </RecentProductsItem>
 
             </RecentProductsItemContainer>
-            <SeeMoreButton> See More </SeeMoreButton>
+
         </RecentProductsContainer>
     )
 }

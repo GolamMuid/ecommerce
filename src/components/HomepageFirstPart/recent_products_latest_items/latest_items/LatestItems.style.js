@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const LatestItemsContainer = styled.div`
+position: relative;
 `
 export const LatestItemsTitle = styled.div`
 font-size: 1.125rem;
@@ -62,13 +63,16 @@ text-decoration: line-through;
 padding-left: 10px;
 `
 export const SeeMoreButton = styled.button`
-display: block;
-margin: 10px auto;
+position: absolute;
+top: 0;
+right: 0;
+padding: 2px 6px;
+border-radius: 4px;
 background-color: ${props => props.theme.color.invertedBg};
-font-size: 1rem;
-padding: 10px;
+font-size: 0.825rem;
 color: ${props => props.theme.color.invertedPrimary};
 border-radius: 6px;
+border: solid 2px ${props => props.theme.color.secondary};
 transition: all 0.3s ease;
 cursor: pointer;
 &:hover{

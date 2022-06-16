@@ -1,16 +1,15 @@
 import React from "react";
-import LeftSideBar from "../../components/users_backend/LeftSideBar/LeftSideBar";
-import { Name } from "../../components/users_backend/LeftSideBar/LeftSideBar.style";
-import { PartCotainer } from "./Profile.style";
+import UserBlankSpace from "../../components/users_backend/UserBlankSpace/UserBlankSpace";
+import UserNavbar from "../../components/users_backend/UserNavbar/UserNavbar";
+import UserProfile from "../../components/users_backend/UserProfile/UserProfile/UserProfile";
 
 function Profile() {
   return (
-    <PartCotainer>
-      <LeftSideBar></LeftSideBar>
-      <>
-        <Name>this is your profile</Name>
-      </>
-    </PartCotainer>
+    <>
+      <UserNavbar />
+      <UserBlankSpace />
+      <UserProfile />
+    </>
   );
 }
 

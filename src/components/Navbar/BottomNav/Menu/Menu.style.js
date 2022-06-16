@@ -16,6 +16,9 @@ margin-top: 26px;
 display: none;
 left: 0;
 transition: all 0.3s ease;
+box-shadow: 10px 10px 18px 4px rgba(0,0,0,0.4);
+border-radius: 0 0 6px 6px;
+border: solid 2px ${props => props.theme.color.borderPrimary};
 @media (max-width: 768px) {
     position: relative;
     border: none;
@@ -29,7 +32,7 @@ font-weight: 400;
 padding: 10px 28px ;
 font-size: 0.85rem;
 transition: all 0.3s ease-in-out;
-background: ${props => props.theme.color.bgSecondary};
+background-color: ${props => props.theme.color.bgQuaternary};
 @media (min-width:767px ) {
     &:hover {
     color: ${props => props.theme.color.invertedPrimary};

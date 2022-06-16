@@ -11,11 +11,18 @@ export const Sidebar = styled.div`
 
 export const SidebarCotainer = styled.div`
   background-color: #061b28;
-  width: 300px;
-  height: 100vh;
-  position: relative;
+  /* width: 300px;
+  height: 100vh; */
+  /* position: fixed; */
+  /* height: 100vh; */
   color: #ffffff;
-  transition: 0.4s;
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  /* transition: 0.4s; */
+  @media (max-width: 768px) {
+    width: 65px;
+  }
 `;
 
 export const SidebarCotainerNX = styled.div`
@@ -40,6 +47,11 @@ export const NavBrand = styled.div`
 export const Name = styled.h1`
   margin-top: 20px;
   margin-left: 20px;
+  @media (max-width: 768px) {
+    font-size: 15px;
+    margin-left: 4px;
+    margin-right: -15px;
+  }
 `;
 
 export const LogoSize = styled.div`
@@ -47,8 +59,12 @@ export const LogoSize = styled.div`
   align-items: center;
   justify-content: center;
   height: 70px;
-  margin-left: 5px;
+  margin-left: 10px;
+  margin-top: 4px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const NavMenu = styled.div`
@@ -70,14 +86,26 @@ export const MenuItem = styled.div`
   margin-left: 40px;
   border-radius: 10px;
   border-color: blue;
+  @media (max-width: 768px) {
+    display: flex;
+    height: 57px;
+  }
 `;
 export const MenuItemImg = styled.div`
   width: 30px;
   padding-left: px;
+  @media (max-width: 768px) {
+    margin-right: 15px;
+    margin-left: -20px;
+  }
 `;
 
 export const MenuName = styled.p`
   margin-top: 5px;
   margin-left: 20px;
+  margin-right: 20px;
   text-decoration: none;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;

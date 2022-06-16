@@ -41,6 +41,8 @@ function Menu() {
                             <MegaMenuSubItem> MEAN Stack </MegaMenuSubItem>
                             <MegaMenuSubItem> Laravel Vue </MegaMenuSubItem>
                         </MegaMenuSubItemContainer>
+                    </MegaMenuSub>
+                    <MegaMenuSub>
                         <MegaMenuSubTitle> Software Solution </MegaMenuSubTitle>
                         <MegaMenuSubItemContainer>
                             <MegaMenuSubItem> Remote Servicing </MegaMenuSubItem>

@@ -13,7 +13,6 @@ export const CategorySelectDropDown = styled.div`
 text-align: center;
 background-color: ${props => props.theme.color.bgSecondary};
 padding: 10px 0px 10px 0px ;
-
 font-size: 1rem;
 font-weight: 400;
 cursor: pointer;
@@ -25,12 +24,17 @@ transition: all 0.3s ease;
 `
 export const CategorySelectOptionContainer = styled.ul`
 position: absolute;
+top: 50px;
 z-index: 6;
 background-color: ${props => props.theme.color.bg};
+display: none;
+${CategorySelectDropDown}:hover &{
+    display: block;
+}
 `
 export const CategorySelectOptionItems = styled.li`
 list-style: none;
-padding: 8px 16px;
+padding: 8px 30px;
 border: solid 1px ${props => props.theme.color.borderPrimary};
 font-size: 0.75rem;
 color: ${props => props.theme.color.primary};
