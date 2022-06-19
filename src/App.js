@@ -7,6 +7,15 @@ import Profile from "./pages/profile/Profile";
 import Order from "./pages/Order/Order";
 import ErrorImg from "./pages/ErrorImg/ErrorImg";
 import Dashboard from "./pages/Dashbord/Dashbord";
+import Processor from "./pages/Processor";
+import Motherboard from "./pages/Motherboard";
+import Ram from "./pages/Ram";
+import Tv from "./pages/Tv";
+import Camera from "./pages/Camera";
+import Headphones from "./pages/Headphones";
+import Smartphones from "./pages/Smartphones";
+import Music from "./pages/Music";
+import Accessories from "./pages/Accessories";
 
 function App() {
   const theme = {
@@ -19,8 +28,8 @@ function App() {
       bgQuaternary: "#F5F5F5",
       invertedPrimary: "white",
       invertedBg: "black",
-      borderPrimary: "#dddddd",
-      rating: " #FFA41C"
+      borderPrimary: "#EBEBEB",
+      rating: " #FFA41C",
     },
   };
 
@@ -35,6 +44,15 @@ function App() {
             <Route path="/profile" element={<Profile />}></Route>
             <Route path="/order" element={<Order />}></Route>
             <Route path="*" element={<ErrorImg />} />
+            <Route path="/processor" element={<Processor />}></Route>
+            <Route path="/motherboard" element={<Motherboard />}></Route>
+            <Route path="/ram" element={<Ram />}></Route>
+            <Route path="/tv" element={<Tv />}></Route>
+            <Route path="/camera" element={<Camera />}></Route>
+            <Route path="/headphones" element={<Headphones />}></Route>
+            <Route path="/smartphones" element={<Smartphones />}></Route>
+            <Route path="/music" element={<Music />}></Route>
+            <Route path="/accessories" element={<Accessories />}></Route>
           </Routes>
           <ScrollToTop />
         </BrowserRouter>

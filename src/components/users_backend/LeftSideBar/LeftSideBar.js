@@ -34,20 +34,20 @@ const LeftSideBar = () => {
             </NavBrand>
           </NavHeading>
           <NavMenu>
-            <NavLink style={{ textDecoration: "none" }} to="/profile">
-              <MenuItem>
-                <MenuItemImg>
-                  <img src={icon4} alt="" srcset="" />
-                </MenuItemImg>
-                <MenuName>Profile</MenuName>
-              </MenuItem>
-            </NavLink>
             <NavLink style={{ textDecoration: "none" }} to="/dashbord">
               <MenuItem>
                 <MenuItemImg>
                   <img src={icon2} alt="" srcset="" />
                 </MenuItemImg>
                 <MenuName>Dashbord</MenuName>
+              </MenuItem>
+            </NavLink>
+            <NavLink style={{ textDecoration: "none" }} to="/profile">
+              <MenuItem>
+                <MenuItemImg>
+                  <img src={icon4} alt="" srcset="" />
+                </MenuItemImg>
+                <MenuName>Profile</MenuName>
               </MenuItem>
             </NavLink>
             <NavLink style={{ textDecoration: "none" }} to="/order">

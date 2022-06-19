@@ -10,6 +10,7 @@ grid-template-columns: 1fr 2fr;
 export const DropDownContainer = styled.div`
 `
 export const CategorySelectDropDown = styled.div`
+position: relative;
 text-align: center;
 background-color: ${props => props.theme.color.bgSecondary};
 padding: 10px 0px 10px 0px ;
@@ -24,7 +25,8 @@ transition: all 0.3s ease;
 `
 export const CategorySelectOptionContainer = styled.ul`
 position: absolute;
-top: 50px;
+width: 100%;
+top: 40px;
 z-index: 6;
 background-color: ${props => props.theme.color.bg};
 display: none;
@@ -34,6 +36,7 @@ ${CategorySelectDropDown}:hover &{
 `
 export const CategorySelectOptionItems = styled.li`
 list-style: none;
+text-align: left;
 padding: 8px 30px;
 border: solid 1px ${props => props.theme.color.borderPrimary};
 font-size: 0.75rem;

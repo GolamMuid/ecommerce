@@ -2,12 +2,14 @@ import React from 'react'
 import { MenuContainer, MenuItem, SubMenuContainer, SubMenuItem } from './Menu.style'
 import { IoIosArrowDown } from 'react-icons/io'
 import { MegaMenuTitle, MegaMenucontainer, MegaMenuSub, MegaMenuSubItem, MegaMenuSubItemContainer, MegaMenuSubTitle } from './MegaMenu.style'
+import { Link } from 'react-router-dom'
+
 
 function Menu() {
     return (
 
         <MenuContainer>
-            <MenuItem> Home  </MenuItem>
+            <Link to="/"> <MenuItem> Home  </MenuItem> </Link>
             <MenuItem> Products <IoIosArrowDown />
                 <SubMenuContainer >
                     <SubMenuItem>Web Application</SubMenuItem>

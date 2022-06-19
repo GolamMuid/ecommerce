@@ -1,11 +1,13 @@
 import React from "react";
 import { ProfilePartContainer } from "./ProfilePart.style";
-import { Text } from "../../UserDashbord/DashbordPart/DashbordPart.style";
+import UserProfileMenu from "../ProfilePartMenu/ProfilePartMenu";
+import ProfilePartInformation from "../ProfilePartInformation/ProfilePartInformaton/ProfilePartInformation";
 
 const ProfilePart = () => {
   return (
     <ProfilePartContainer>
-      <Text>HI MR. It is your Profile.</Text>
+      <UserProfileMenu />
+      <ProfilePartInformation />
     </ProfilePartContainer>
   );
 };

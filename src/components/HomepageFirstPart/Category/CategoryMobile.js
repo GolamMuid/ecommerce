@@ -7,7 +7,7 @@ import { GoDeviceMobile } from 'react-icons/go'
 import { GiHamburgerMenu, GiLipstick } from 'react-icons/gi'
 import { FaTshirt } from 'react-icons/fa'
 import { BsMusicNoteBeamed, BsLightningCharge, BsSunglasses } from 'react-icons/bs'
-
+import { Link } from 'react-router-dom'
 
 function CategoryMobile() {
     const [categoryExpanded, setCategoryExpanded] = useState(false)
@@ -60,9 +60,10 @@ function CategoryMobile() {
                     </SubMenuItem>
 
                     <SubSubMenuContainer style={subMenuExpanded1 ? { display: 'none' } : { display: 'block' }} >
-                        <SubSubMenuItem> Processor </SubSubMenuItem>
-                        <SubSubMenuItem> Hard Drive </SubSubMenuItem>
-                        <SubSubMenuItem> Motherboard </SubSubMenuItem>
+                        <Link to="/processor"> <SubSubMenuItem> Processor </SubSubMenuItem>  </Link>
+                        <Link to="/motherboard"> <SubSubMenuItem> Motherboard </SubSubMenuItem> </Link>
+                        <Link to="/ram"> <SubSubMenuItem> RAM </SubSubMenuItem> </Link>
+                        <SubSubMenuItem> Power Supply </SubSubMenuItem>
                     </SubSubMenuContainer>
 
 
@@ -70,12 +71,12 @@ function CategoryMobile() {
                     <SubMenuItem> Prebuilt PC </SubMenuItem>
                 </SubMenuContainer>
 
-                <CategoryItem> <FiMonitor /> TV and Smartbox </CategoryItem>
-                <CategoryItem> <FiCamera /> Camera and Photography </CategoryItem>
-                <CategoryItem> <MdHeadphones /> Headphones </CategoryItem>
-                <CategoryItem> <GoDeviceMobile /> Smartphone and Tablet </CategoryItem>
-                <CategoryItem> <BsMusicNoteBeamed /> Musical Instruments </CategoryItem>
-                <CategoryItem> <BsLightningCharge /> Accessories </CategoryItem>
+                <Link to="/tv">  <CategoryItem> <FiMonitor /> TV and Smartbox </CategoryItem> </Link>
+                <Link to="/camera">  <CategoryItem> <FiCamera /> Camera and Photography </CategoryItem> </Link>
+                <Link to="/headphones">  <CategoryItem> <MdHeadphones /> Headphones </CategoryItem> </Link>
+                <Link to="/smartphones">  <CategoryItem> <GoDeviceMobile /> Smartphones and Tablets </CategoryItem> </Link>
+                <Link to="/music">  <CategoryItem> <BsMusicNoteBeamed /> Musical Instruments </CategoryItem> </Link>
+                <Link to="/accessories">  <CategoryItem> <BsLightningCharge /> Accessories </CategoryItem> </Link>
                 <CategoryItem> <FaTshirt /> Clothing </CategoryItem>
                 <CategoryItem> <GiLipstick /> Personal </CategoryItem>
                 <CategoryItem> <BsSunglasses /> Fashion </CategoryItem>

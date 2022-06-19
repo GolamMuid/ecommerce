@@ -7,14 +7,19 @@ import { FiRefreshCw } from 'react-icons/fi'
 function ProductDefault(props) {
     return (
         <ProductDefaultContainer>
-            <NewContainer>
-                <NewText>
-                    New
-                </NewText>
-            </NewContainer>
-            <SalePercentageContainer>
-                {props.salePercentage}
-            </SalePercentageContainer>
+            {props.isNew &&
+                <NewContainer>
+                    <NewText>
+                        New
+                    </NewText>
+                </NewContainer>
+            }
+            {
+                props.isSalePercentage &&
+                <SalePercentageContainer>
+                    {props.salePercentage}
+                </SalePercentageContainer>
+            }
             <WishlistViewCompareContainer>
                 <WishlistViewCompare>
                     <BsHeart />

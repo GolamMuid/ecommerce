@@ -51,6 +51,10 @@ ${ProductDefaultContainer}:hover &{
     opacity: 1;
     visibility: visible;
 }
+@media (max-width: 768px) {
+    opacity: 1;
+    visibility: visible;
+}
 `
 export const WishlistViewCompare = styled.div`
 font-size: 1.125rem;
@@ -104,6 +108,12 @@ ${ProductDefaultContainer}:hover &{
     opacity: 1;
     visibility: visible;
 }
+
+@media (max-width: 768px) {
+    bottom: 22%;
+    opacity: 1;
+    visibility: visible;
+}
 `
 export const ProductNameRatingPriceContainer = styled.div`
 display: grid;
@@ -131,4 +141,16 @@ font-size: 1rem;
 font-weight: 500;
 color: ${props => props.theme.color.secondary};
 text-align: right;
+`
+
+export const AllProductsContainer = styled.div`
+padding: 10px;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+column-gap: 10px;
+row-gap: 10px;
+background-color: ${props => props.theme.color.bgQuaternary};
+@media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+}
 `

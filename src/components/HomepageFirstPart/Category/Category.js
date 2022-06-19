@@ -7,6 +7,7 @@ import { FiMonitor, FiCamera, } from 'react-icons/fi'
 import { GoDeviceMobile } from 'react-icons/go'
 import { GiHamburgerMenu, GiLipstick } from 'react-icons/gi'
 import { BsMusicNoteBeamed, BsLightningCharge, BsSunglasses } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 function Category() {
     const [categoryExpanded, setCategoryExpanded] = useState(false)
@@ -50,9 +51,9 @@ function Category() {
                                     Components
                                 </CategoryMegaMenuTitle>
 
-                                <CategoryMegaMenuItem> - Processor </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> - Harddisk </CategoryMegaMenuItem>
-                                <CategoryMegaMenuItem> - Motherboard </CategoryMegaMenuItem>
+                                <Link to="/processor"> <CategoryMegaMenuItem>  - Processor </CategoryMegaMenuItem>  </Link>
+                                <Link to="/motherboard"> <CategoryMegaMenuItem>  - Motherboard </CategoryMegaMenuItem>  </Link>
+                                <Link to="/ram"> <CategoryMegaMenuItem>  - RAM </CategoryMegaMenuItem>  </Link>
                                 <CategoryMegaMenuItem> - Power Supply </CategoryMegaMenuItem>
 
                             </CategoryMegaMenuColumns>
@@ -195,12 +196,13 @@ function Category() {
                     <SubMenuItem> Tablet </SubMenuItem>
                 </SubMenuContainer>
 
-                <CategoryItem> <FiMonitor /> TV and Smartbox </CategoryItem>
-                <CategoryItem> <FiCamera /> Camera and Photography </CategoryItem>
-                <CategoryItem> <MdHeadphones />  Headphones </CategoryItem>
-                <CategoryItem> <GoDeviceMobile /> Smartphone and Tablet </CategoryItem>
-                <CategoryItem> <BsMusicNoteBeamed /> Musical Instruments </CategoryItem>
-                <CategoryItem> <BsLightningCharge /> Accessories </CategoryItem>
+                <Link to="/tv">  <CategoryItem> <FiMonitor /> TV and Smartbox </CategoryItem> </Link>
+                <Link to="/camera">  <CategoryItem> <FiCamera /> Camera and Photography </CategoryItem> </Link>
+                <Link to="/headphones">  <CategoryItem> <MdHeadphones /> Headphones </CategoryItem> </Link>
+                <Link to="/smartphones">  <CategoryItem> <GoDeviceMobile /> Smartphones and Tablets </CategoryItem> </Link>
+                <Link to="/music">  <CategoryItem> <BsMusicNoteBeamed /> Musical Instruments </CategoryItem> </Link>
+                <Link to="/accessories">  <CategoryItem> <BsLightningCharge /> Accessories </CategoryItem> </Link>
+
                 <CategoryItem> <FaTshirt /> Clothing </CategoryItem>
                 <CategoryItem> <GiLipstick /> Personal </CategoryItem>
                 <CategoryItem> <BsSunglasses /> Fashion </CategoryItem>

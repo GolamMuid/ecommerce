@@ -17,13 +17,16 @@ function SearchAndDropDown() {
                     All Categories &nbsp; <IoIosArrowDown />
 
                     <CategorySelectOptionContainer>
-                        <CategorySelectOptionItems> Option </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Option </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Option </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Option </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Option </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Option </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Option </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Computer </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Tv and Smartbox </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Camera and Photography </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Headphones </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Smartphone and Tablet </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Musical Instrument </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Accessories </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Clothing </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Personal </CategorySelectOptionItems>
+                        <CategorySelectOptionItems> Fashion </CategorySelectOptionItems>
                     </CategorySelectOptionContainer>
                 </CategorySelectDropDown>
             </DropDownContainer>

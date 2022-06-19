@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const ProfilePartContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
   width: 100%;
   font-size: 28px;
   padding: 5px 10px;
