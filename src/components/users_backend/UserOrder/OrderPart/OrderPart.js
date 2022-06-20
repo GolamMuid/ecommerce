@@ -1,14 +1,13 @@
 import React from "react";
-import { Text } from "../../UserDashbord/DashbordPart/DashbordPart.style";
+import OrderCard from "./OrderCard/OrderCard";
 import { OrderPartContainer } from "./OrderPart.style";
 
 const OrderPart = () => {
   return (
-    <>
-      <OrderPartContainer>
-        <Text>This is your Order.!!!!!!!!!</Text>
-      </OrderPartContainer>
-    </>
+    <OrderPartContainer>
+      {/* <OrderPartMenu /> */}
+      <OrderCard />
+    </OrderPartContainer>
   );
 };
 

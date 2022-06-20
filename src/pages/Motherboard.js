@@ -1,15 +1,19 @@
 import React from 'react'
+import Footer from '../components/Footer/Footer'
+import BlogPosts from '../components/HomepageFirstPart/blog_posts/BlogPosts'
 import Navbar from '../components/Navbar/Navbar'
 import BlankSpace from '../components/Other Components/BlankSpace'
 import PageTitle from '../components/page_title/PageTitle'
 import ProductDefault from '../components/product_default/ProductDefault'
 import { AllProductsContainer } from '../components/product_default/ProductDefault.style'
+import SearchAndCart from '../components/search_cart/SearchAndCart'
 
 function Motherboard() {
     return (
         <>
             <Navbar />
             <BlankSpace />
+            <SearchAndCart />
             <PageTitle pageTitle="Motherboard" />
             <AllProductsContainer>
                 <ProductDefault salePercentage="20%"
@@ -74,6 +78,8 @@ function Motherboard() {
                     oldPrice="$150" productName="MSI Force Z690 Wifi Motherboard" currentPrice="$140" />
 
             </AllProductsContainer>
+            <BlogPosts />
+            <Footer />
         </>
     )
 }

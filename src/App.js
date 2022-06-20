@@ -7,6 +7,13 @@ import Profile from "./pages/profile/Profile";
 import Order from "./pages/Order/Order";
 import ErrorImg from "./pages/ErrorImg/ErrorImg";
 import Dashboard from "./pages/Dashbord/Dashbord";
+
+import OrderDelivered from "./pages/Order/OrderDelivered";
+import OrderOnProgress from "./pages/Order/OrderOnProgress";
+import OrderCanceled from "./pages/Order/OrderCanceled";
+import Login from "./pages/Login/Login";
+import Registration from "./pages/Login/Registration";
+
 import Processor from "./pages/Processor";
 import Motherboard from "./pages/Motherboard";
 import Ram from "./pages/Ram";
@@ -16,6 +23,10 @@ import Headphones from "./pages/Headphones";
 import Smartphones from "./pages/Smartphones";
 import Music from "./pages/Music";
 import Accessories from "./pages/Accessories";
+import Clothing from "./pages/Clothing";
+import Personal from "./pages/Personal";
+import Grocery from "./pages/Grocery";
+import ProductDetail from "./pages/ProductDetail/ProductDetail";
 
 function App() {
   const theme = {
@@ -43,6 +54,11 @@ function App() {
             <Route path="/dashbord" element={<Dashboard />}></Route>
             <Route path="/profile" element={<Profile />}></Route>
             <Route path="/order" element={<Order />}></Route>
+            <Route path="/order/delivered" element={<OrderDelivered />}></Route>
+            <Route path="/order/process" element={<OrderOnProgress />}></Route>
+            <Route path="/order/cancel" element={<OrderCanceled />}></Route>
+            <Route path="/login" element={<Login />}></Route>
+            <Route path="/registration" element={<Registration />}></Route>
             <Route path="*" element={<ErrorImg />} />
             <Route path="/processor" element={<Processor />}></Route>
             <Route path="/motherboard" element={<Motherboard />}></Route>
@@ -53,6 +69,12 @@ function App() {
             <Route path="/smartphones" element={<Smartphones />}></Route>
             <Route path="/music" element={<Music />}></Route>
             <Route path="/accessories" element={<Accessories />}></Route>
+            <Route path="/clothing" element={<Clothing />}></Route>
+            <Route path="/personal" element={<Personal />}></Route>
+            <Route path="/grocery" element={<Grocery />}></Route>
+            <Route path="/detail" element={<ProductDetail />}></Route>
+
+
           </Routes>
           <ScrollToTop />
         </BrowserRouter>

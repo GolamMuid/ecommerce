@@ -1,16 +1,19 @@
 import React from 'react'
+import Footer from '../components/Footer/Footer'
+import BlogPosts from '../components/HomepageFirstPart/blog_posts/BlogPosts'
 import Navbar from '../components/Navbar/Navbar'
 import BlankSpace from '../components/Other Components/BlankSpace'
 import PageTitle from '../components/page_title/PageTitle'
 import ProductDefault from '../components/product_default/ProductDefault'
 import { AllProductsContainer } from '../components/product_default/ProductDefault.style'
-
+import SearchAndCart from '../components/search_cart/SearchAndCart'
 
 function Camera() {
     return (
         <>
             <Navbar />
             <BlankSpace />
+            <SearchAndCart />
             <PageTitle pageTitle="Camera and Photography" />
             <AllProductsContainer>
                 <ProductDefault salePercentage="20%" isNew="True" isSalePercentage="True"
@@ -34,7 +37,8 @@ function Camera() {
                     oldPrice="$50" productName="Go Pro action Camera" currentPrice="$40" />
 
             </AllProductsContainer>
-
+            <BlogPosts />
+            <Footer />
         </>
     )
 }

@@ -8,11 +8,12 @@ export const ProfilePartMenuContainer = styled.div`
   }
 `;
 export const ProfilePartMenuItem = styled.button`
-  display: inline-block;
+  /* display: inline-block; */
   border-radius: 5px;
   padding: 0.5rem 0rem;
   margin: 0.7rem 0rem 0.7rem 1rem;
-  width: 19rem;
+  /* width: 19rem; */
+  width: 95%;
   background: transparent;
   /* color: black; */
   border: 2px solid #ffffff;

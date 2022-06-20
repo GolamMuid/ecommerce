@@ -41,12 +41,17 @@ export const UpdateButton = styled.button`
   /* margin: 0.5rem 1rem; */
   /* width: 11rem; */
   margin-top: 30px;
-  margin-left: 6px;
+  margin-right: 16px;
   height: 50px;
   font-size: 25px;
   background: transparent;
   color: black;
   border: 2px solid black;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+    background-color: gray;
+  }
 `;
 
 export const HeadingNameContainer = styled.h1`

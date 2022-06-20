@@ -1,15 +1,19 @@
 import React from 'react'
+import Footer from '../components/Footer/Footer'
+import BlogPosts from '../components/HomepageFirstPart/blog_posts/BlogPosts'
 import Navbar from '../components/Navbar/Navbar'
 import BlankSpace from '../components/Other Components/BlankSpace'
 import PageTitle from '../components/page_title/PageTitle'
 import ProductDefault from '../components/product_default/ProductDefault'
 import { AllProductsContainer } from '../components/product_default/ProductDefault.style'
+import SearchAndCart from '../components/search_cart/SearchAndCart'
 
 function Ram() {
     return (
         <>
             <Navbar />
             <BlankSpace />
+            <SearchAndCart />
             <PageTitle pageTitle="Processors" />
             <AllProductsContainer>
                 <ProductDefault salePercentage="20%"
@@ -42,9 +46,9 @@ function Ram() {
                 <ProductDefault salePercentage="20%"
                     image="assets/images/ram/corsair-white.jpg"
                     oldPrice="$50" productName="Transcend 8GB DDR4 RAM" currentPrice="$40" />
-
-
             </AllProductsContainer>
+            <BlogPosts />
+            <Footer />
         </>
     )
 }

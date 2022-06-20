@@ -93,7 +93,15 @@ export const MenuItem = styled.div`
 `;
 export const MenuItemImg = styled.div`
   width: 30px;
-  padding-left: px;
+  @media (max-width: 768px) {
+    margin-right: 15px;
+    margin-left: -20px;
+  }
+`;
+export const IconItem = styled.div`
+  width: 30px;
+  font-size: 30px;
+
   @media (max-width: 768px) {
     margin-right: 15px;
     margin-left: -20px;

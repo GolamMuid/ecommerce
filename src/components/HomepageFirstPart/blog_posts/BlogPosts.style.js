@@ -15,6 +15,10 @@ export const BlogPostsItemContainer = styled.div`
 display: grid;
 grid-template-columns: repeat(4, 1fr);
 column-gap: 10px;
+row-gap: 10px;
+@media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+}
 `
 export const BlogPostsItem = styled.div`
 cursor: pointer;

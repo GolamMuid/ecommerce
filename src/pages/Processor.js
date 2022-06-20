@@ -1,15 +1,19 @@
 import React from 'react'
+import Footer from '../components/Footer/Footer'
+import BlogPosts from '../components/HomepageFirstPart/blog_posts/BlogPosts'
 import Navbar from '../components/Navbar/Navbar'
 import BlankSpace from '../components/Other Components/BlankSpace'
 import PageTitle from '../components/page_title/PageTitle'
 import ProductDefault from '../components/product_default/ProductDefault'
 import { AllProductsContainer } from '../components/product_default/ProductDefault.style'
+import SearchAndCart from '../components/search_cart/SearchAndCart'
 
 function Processor() {
     return (
         <>
             <Navbar />
             <BlankSpace />
+            <SearchAndCart />
             <PageTitle pageTitle="Processors" />
             <AllProductsContainer>
                 <ProductDefault salePercentage="20%"
@@ -73,8 +77,9 @@ function Processor() {
                     image="assets/images/processors/12700.png"
                     oldPrice="$230" productName="Intel 12th Gen Core i7 processor OVERCLOCK (12700)" currentPrice="$200" />
 
-
             </AllProductsContainer>
+            <BlogPosts />
+            <Footer />
         </>
     )
 }

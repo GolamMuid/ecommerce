@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
-export const LogoutContainer = styled.button`
-  /* Adapt the colors based on primary prop */
-  /* background: #ffffff;
-  color: darkred; */
+export const LogoutContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: right;
@@ -12,8 +9,4 @@ export const LogoutContainer = styled.button`
   background: #ffffff;
   color: darkred;
   padding: 0.25em 1em;
-  /* margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid #ffffff;
-  border-radius: 3px; */
 `;

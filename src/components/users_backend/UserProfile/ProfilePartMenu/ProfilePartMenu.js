@@ -22,7 +22,7 @@ const ProfilePartMenu = () => {
         </ProfilePartMenuDiscription>
       </ProfilePartMenuItem>
       <ProfilePartMenuItem>
-        <ProfilePartMenuHeding>Password and Sucurity</ProfilePartMenuHeding>
+        <ProfilePartMenuHeding>Password and Security</ProfilePartMenuHeding>
         <ProfilePartMenuDiscription>
           Change your Password
         </ProfilePartMenuDiscription>

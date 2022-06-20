@@ -4,7 +4,7 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { MdComputer, MdHeadphones } from 'react-icons/md'
 import { FiMonitor, FiCamera, } from 'react-icons/fi'
 import { GoDeviceMobile } from 'react-icons/go'
-import { GiHamburgerMenu, GiLipstick } from 'react-icons/gi'
+import { GiHamburgerMenu, GiLipstick, GiCampCookingPot } from 'react-icons/gi'
 import { FaTshirt } from 'react-icons/fa'
 import { BsMusicNoteBeamed, BsLightningCharge, BsSunglasses } from 'react-icons/bs'
 import { Link } from 'react-router-dom'
@@ -77,9 +77,10 @@ function CategoryMobile() {
                 <Link to="/smartphones">  <CategoryItem> <GoDeviceMobile /> Smartphones and Tablets </CategoryItem> </Link>
                 <Link to="/music">  <CategoryItem> <BsMusicNoteBeamed /> Musical Instruments </CategoryItem> </Link>
                 <Link to="/accessories">  <CategoryItem> <BsLightningCharge /> Accessories </CategoryItem> </Link>
-                <CategoryItem> <FaTshirt /> Clothing </CategoryItem>
-                <CategoryItem> <GiLipstick /> Personal </CategoryItem>
-                <CategoryItem> <BsSunglasses /> Fashion </CategoryItem>
+                <Link to="/clothing">  <CategoryItem> <FaTshirt /> Clothing </CategoryItem> </Link>
+                <Link to="/personal">  <CategoryItem> <GiLipstick /> Personal Care </CategoryItem> </Link>
+                <Link to="/grocery">  <CategoryItem> <GiCampCookingPot /> Groceries </CategoryItem> </Link>
+
             </CategoryMenuContainer>
         </CategoryContainer>
     )

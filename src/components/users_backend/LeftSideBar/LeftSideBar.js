@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 import {
+  IconItem,
   LogoSize,
   MenuItem,
   MenuItemImg,
@@ -17,6 +18,8 @@ import icon1 from "../icons/admin-avatar.svg";
 import icon2 from "../icons/grid.svg";
 import icon3 from "../icons/shopping-cart.svg";
 import icon4 from "../icons/user.svg";
+import { FcApproval, FcClock } from "react-icons/fc";
+import { FaRegTimesCircle } from "react-icons/fa";
 
 const LeftSideBar = () => {
   // const [isExpanded, setExpendState] = useState(false);
@@ -41,6 +44,22 @@ const LeftSideBar = () => {
                 </MenuItemImg>
                 <MenuName>Dashbord</MenuName>
               </MenuItem>
+              {/* <MenuContainer>
+      <OrderPartMenuContainer>
+        <OrderMenuButton>
+          <FcApproval />
+          Completed
+        </OrderMenuButton>
+        <OrderMenuButton>
+          <FcClock />
+          On Progress
+        </OrderMenuButton>
+        <OrderMenuButton>
+          <FaRegTimesCircle style={{ color: "red" }} />
+          Canceled
+        </OrderMenuButton>
+      </OrderPartMenuContainer>
+    </MenuContainer> */}
             </NavLink>
             <NavLink style={{ textDecoration: "none" }} to="/profile">
               <MenuItem>
@@ -56,6 +75,30 @@ const LeftSideBar = () => {
                   <img src={icon3} alt="" srcset="" />
                 </MenuItemImg>
                 <MenuName>Order</MenuName>
+              </MenuItem>
+            </NavLink>
+            <NavLink style={{ textDecoration: "none" }} to="/order/delivered">
+              <MenuItem>
+                <IconItem>
+                  <FcApproval />
+                </IconItem>
+                <MenuName>Completed</MenuName>
+              </MenuItem>
+            </NavLink>
+            <NavLink style={{ textDecoration: "none" }} to="/order/process">
+              <MenuItem>
+                <IconItem>
+                  <FcClock />
+                </IconItem>
+                <MenuName>On Progress</MenuName>
+              </MenuItem>
+            </NavLink>
+            <NavLink style={{ textDecoration: "none" }} to="/order/cancel">
+              <MenuItem>
+                <IconItem>
+                  <FaRegTimesCircle />
+                </IconItem>
+                <MenuName>Canceled</MenuName>
               </MenuItem>
             </NavLink>
           </NavMenu>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { CategorySelectDropDown, CategorySelectOption, CategorySelectOptionContainer, CategorySelectOptionItems, DropDownContainer, SearchAndDropDownContainer, SearchBox, SearchButton, SearchContainer } from './SearchAndDropDown.style'
 import { IoIosArrowDown } from 'react-icons/io'
+import { Link } from 'react-router-dom'
 
 function SearchAndDropDown() {
 
@@ -17,16 +18,17 @@ function SearchAndDropDown() {
                     All Categories &nbsp; <IoIosArrowDown />
 
                     <CategorySelectOptionContainer>
-                        <CategorySelectOptionItems> Computer </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Tv and Smartbox </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Camera and Photography </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Headphones </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Smartphone and Tablet </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Musical Instrument </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Accessories </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Clothing </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Personal </CategorySelectOptionItems>
-                        <CategorySelectOptionItems> Fashion </CategorySelectOptionItems>
+
+                        <Link to="/tv">  <CategorySelectOptionItems>  TV and Smartbox </CategorySelectOptionItems> </Link>
+                        <Link to="/camera">  <CategorySelectOptionItems>  Camera and Photography </CategorySelectOptionItems> </Link>
+                        <Link to="/headphones">  <CategorySelectOptionItems>  Headphones </CategorySelectOptionItems> </Link>
+                        <Link to="/smartphones">  <CategorySelectOptionItems>  Smartphones and Tablets </CategorySelectOptionItems> </Link>
+                        <Link to="/music">  <CategorySelectOptionItems>  Musical Instruments </CategorySelectOptionItems> </Link>
+                        <Link to="/accessories">  <CategorySelectOptionItems>  Accessories </CategorySelectOptionItems> </Link>
+                        <Link to="/clothing">  <CategorySelectOptionItems>  Clothing </CategorySelectOptionItems> </Link>
+                        <Link to="/personal">  <CategorySelectOptionItems>  Personal Care </CategorySelectOptionItems> </Link>
+                        <Link to="/grocery">  <CategorySelectOptionItems>  Groceries </CategorySelectOptionItems> </Link>
+
                     </CategorySelectOptionContainer>
                 </CategorySelectDropDown>
             </DropDownContainer>
