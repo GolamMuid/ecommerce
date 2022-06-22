@@ -25,48 +25,47 @@ import { GrLocation } from 'react-icons/gr'
 import { TbTruckDelivery } from 'react-icons/tb'
 import { GiPayMoney, GiReturnArrow } from 'react-icons/gi'
 
+
 import "swiper/css";
 import "swiper/css/thumbs";
 
-function ProductImageAndDeliveryDetail() {
+function ProductImageAndDeliveryDetail(props) {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+    const [counter, setCounter] = useState(1);
+
+    const increase = () =>
+        setCounter(counter => counter + 1)
+
+    const decrease = () => { counter == 1 ? setCounter(counter) : setCounter(counter => counter - 1) }
 
     return (
         <ProductImageAndDeliveryDetailContainer>
 
             <ProductImageView>
                 <Swiper
-
                     spaceBetween={1000}
                     // navigation={true}
                     thumbs={{ swiper: thumbsSwiper }}
                     modules={[Thumbs]}
-                    className="mySwiper2"
-                >
+                    className="mySwiper2">
+
                     <SwiperSlide>
-                        <img
-                            src={`${process.env.PUBLIC_URL}/assets/images/Product Detail/beats1.jpg`}
-                            alt=""
-                        />
+                        <img src={process.env.PUBLIC_URL + "/" + props.image1} alt="" />
                     </SwiperSlide>
+
                     <SwiperSlide>
-                        <img
-                            src={`${process.env.PUBLIC_URL}/assets/images/Product Detail/beats2.jpg`}
-                            alt=""
-                        />
+                        <img src={process.env.PUBLIC_URL + "/" + props.image2} alt="" />
                     </SwiperSlide>
+
                     <SwiperSlide>
-                        <img
-                            src={`${process.env.PUBLIC_URL}/assets/images/Product Detail/beats3.jpg`}
-                            alt=""
-                        />
+                        <img src={process.env.PUBLIC_URL + "/" + props.image3} alt="" />
                     </SwiperSlide>
+
                     <SwiperSlide>
-                        <img
-                            src={`${process.env.PUBLIC_URL}/assets/images/Product Detail/beats4.jpg`}
-                            alt=""
-                        />
+                        <img src={process.env.PUBLIC_URL + "/" + props.image4} alt="" />
                     </SwiperSlide>
+
 
                 </Swiper>
 
@@ -77,31 +76,19 @@ function ProductImageAndDeliveryDetail() {
                     freeMode={true}
                     watchSlidesProgress={true}
                     modules={[Thumbs]}
-                    className="mySwiper"
-                >
+                    className="mySwiper">
+
                     <SwiperSlide>
-                        <img
-                            src={`${process.env.PUBLIC_URL}/assets/images/Product Detail/beats1.jpg`}
-                            alt=""
-                        />
+                        <img src={process.env.PUBLIC_URL + "/" + props.image1} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            src={`${process.env.PUBLIC_URL}/assets/images/Product Detail/beats2.jpg`}
-                            alt=""
-                        />
+                        <img src={process.env.PUBLIC_URL + "/" + props.image2} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            src={`${process.env.PUBLIC_URL}/assets/images/Product Detail/beats3.jpg`}
-                            alt=""
-                        />
+                        <img src={process.env.PUBLIC_URL + "/" + props.image3} alt="" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            src={`${process.env.PUBLIC_URL}/assets/images/Product Detail/beats4.jpg`}
-                            alt=""
-                        />
+                        <img src={process.env.PUBLIC_URL + "/" + props.image4} alt="" />
                     </SwiperSlide>
 
                 </Swiper>
@@ -112,7 +99,7 @@ function ProductImageAndDeliveryDetail() {
             <ProductDetails>
                 <ProductInformationContianer>
                     <ProductDetailTitle>
-                        Beats Pro By Dr. Dre
+                        {props.name}
                     </ProductDetailTitle>
                     <ProductDetailRating>
                         <BsStar />
@@ -122,26 +109,26 @@ function ProductImageAndDeliveryDetail() {
                         <BsStar />
                     </ProductDetailRating>
                     <ProductRatingNumbers>
-                        12 ratings
+                        {props.numberOfRatings} ratings
                     </ProductRatingNumbers>
                     <ProductBrand>
-                        Brand : Beats
+                        Brand : {props.brandName}
                     </ProductBrand>
                 </ProductInformationContianer>
                 <ProductDetailPriceInfo>
                     <ProductDetailPrice>
-                        $200
+                        {props.currentPrice}
                     </ProductDetailPrice>
                     <ProductDetailOldPriceContainer>
                         <ProductDetailOldPrice>
-                            $250
+                            {props.oldPrice}
                         </ProductDetailOldPrice>
                         <ProductDetailDiscount>
-                            -20%
+                            {props.discount}
                         </ProductDetailDiscount>
                     </ProductDetailOldPriceContainer>
                     <ProductDetailPromotion>
-                        Promotions : 10% off on spending $1000 or more
+                        Promotions : {props.promotion}
                     </ProductDetailPromotion>
                 </ProductDetailPriceInfo>
                 <ProductVariantAndPurchaseContainer>
@@ -154,9 +141,9 @@ function ProductImageAndDeliveryDetail() {
                         </ProductVariantSelect>
                     </ProductVariantContainer>
                     <ProductDetailQuantityContianer>
-                        <ProductDetailQuantityButton> - </ProductDetailQuantityButton>
-                        <ProductDetailQuantityNumber> 1 </ProductDetailQuantityNumber>
-                        <ProductDetailQuantityButton> + </ProductDetailQuantityButton>
+                        <ProductDetailQuantityButton onClick={decrease}> - </ProductDetailQuantityButton>
+                        <ProductDetailQuantityNumber> {counter} </ProductDetailQuantityNumber>
+                        <ProductDetailQuantityButton onClick={increase}> + </ProductDetailQuantityButton>
                     </ProductDetailQuantityContianer>
                     <ProductPurchaseContainer>
                         <ProductDetailBuyNowButton> Buy Now </ProductDetailBuyNowButton>
@@ -176,7 +163,7 @@ function ProductImageAndDeliveryDetail() {
                             < GrLocation />
                         </DeliveryLocationIcon>
                         <DeliveryLocation>
-                            Dhaka, Dhaka North, Banani, Road No. 12-19
+                            {props.deliveryLocation}
                         </DeliveryLocation>
                         <DeliveryLocationChange>
                             Change
@@ -191,14 +178,14 @@ function ProductImageAndDeliveryDetail() {
                     </DeliveryTypeIcon>
                     <DeliveryTypeTimeContainer>
                         <DeliveryType>
-                            Home Delivery
+                            {props.deliveryType}
                         </DeliveryType>
                         <DeliveryTime>
-                            2-4 days
+                            {props.deliveryDuration}
                         </DeliveryTime>
                     </DeliveryTypeTimeContainer>
                     <DeliveryCharge>
-                        $50
+                        {props.deliveryCharge}
                     </DeliveryCharge>
 
                 </DeliveryLocationContainer>
@@ -209,7 +196,7 @@ function ProductImageAndDeliveryDetail() {
                         < GiPayMoney />
                     </CodIcon>
                     <CodAvailability>
-                        Cash on Delivery Available
+                        {props.codAvailability}
                     </CodAvailability>
 
 
@@ -226,10 +213,10 @@ function ProductImageAndDeliveryDetail() {
                         </ReturnIcon>
                         <ReturnPolicyDetails>
                             <ReturnPolicy>
-                                7 Days Return
+                                {props.returnTime}
                             </ReturnPolicy>
                             <ReturnPolicyCondition>
-                                Change of mind is not applicable
+                                {props.returnCondition}
                             </ReturnPolicyCondition>
                         </ReturnPolicyDetails>
                     </ReturnPolicyContainer>
@@ -239,7 +226,7 @@ function ProductImageAndDeliveryDetail() {
                             <BsShieldSlash />
                         </ReturnIcon>
                         <ReturnPolicy>
-                            Warranty not Available
+                            {props.warranty}
                         </ReturnPolicy>
                     </ReturnPolicyContainer>
 
@@ -251,7 +238,7 @@ function ProductImageAndDeliveryDetail() {
                         Sold By
                     </SellerTitle>
                     <SellerName>
-                        Gadgetmart BD
+                        {props.sellerName}
                     </SellerName>
                 </SellerInfoContainer>
             </DeliveryDetailContainer>

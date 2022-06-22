@@ -6,5 +6,5 @@ export const TransactionPartContainer = styled.div`
 `;
 export const TransactionTextContainer = styled.div`
   margin-left: 15px;
-  margin-top: 5px;
+  margin-top: 1px;
 `;

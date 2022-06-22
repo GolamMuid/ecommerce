@@ -60,8 +60,11 @@ const UserLogin = () => {
           <ForgotPassword>Forgot Password ?</ForgotPassword>
           <br />
           <RegistrationText>
-            If you are a new User please Registration here
+            <Link style={{ color: "blue" }} to="/registration">
+              NEW USER? PLEASE REGISTER
+            </Link>
           </RegistrationText>
+          {/* <RegistrationText>NEW USER? PLEASE REGISTER</RegistrationText> */}
           <br></br>
           <br></br>
           <CancelButton>

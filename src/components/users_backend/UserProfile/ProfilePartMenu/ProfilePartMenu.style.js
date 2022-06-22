@@ -1,16 +1,18 @@
 import styled from "styled-components";
 
 export const ProfilePartMenuContainer = styled.div`
-  margin-left: 258px;
+  margin-left: 245px;
   margin-top: 25px;
+  margin-right: 5px;
   @media (max-width: 768px) {
     margin-left: 68px;
+    margin-right: 5px;
   }
 `;
 export const ProfilePartMenuItem = styled.button`
   /* display: inline-block; */
   border-radius: 5px;
-  padding: 0.5rem 0rem;
+  padding: 0.2rem 0rem;
   margin: 0.7rem 0rem 0.7rem 1rem;
   /* width: 19rem; */
   width: 95%;
@@ -30,13 +32,13 @@ export const ProfilePartMenuItem = styled.button`
 `;
 
 export const ProfilePartMenuHeding = styled.h1`
-  font-size: 24px;
-  padding: 5px;
+  font-size: 21px;
+  padding: 4px;
   text-align: left;
   margin-left: 15px;
 `;
 export const ProfilePartMenuDiscription = styled.p`
-  font-size: 15px;
+  font-size: 14px;
   padding: 5px;
   text-align: left;
   margin-left: 15px;

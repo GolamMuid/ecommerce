@@ -1,11 +1,8 @@
 import React from "react";
+import UserRegister from "../../components/users_backend/UserRegister/UserRegister";
 
 const Registration = () => {
-  return (
-    <div>
-      <h1>this in Registration</h1>
-    </div>
-  );
+  return <UserRegister />;
 };
 
 export default Registration;

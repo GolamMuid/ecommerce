@@ -22,7 +22,7 @@ const TransactionCancel = () => {
         Canceled
       </OrderCanceledButton>
       <ProductModal show={isOpen} handleClose={hideModal}>
-        <h1>Your Delivered Product is:</h1>
+        <h1>Your Canceled Product is:</h1>
         <br />
         <ol>
           <h3>Premium School Bag</h3>

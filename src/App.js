@@ -74,7 +74,6 @@ function App() {
             <Route path="/grocery" element={<Grocery />}></Route>
             <Route path="/detail" element={<ProductDetail />}></Route>
 
-
           </Routes>
           <ScrollToTop />
         </BrowserRouter>

@@ -16,15 +16,32 @@ export const ProfileAccountDetailsContainer = styled.div`
 `;
 export const HeadingTitel = styled.h1`
   margin-top: 9px;
-  font-size: 24px;
-  padding: 5px;
+  font-size: 21px;
+  padding: 4px;
   text-align: left;
-  margin-left: 7px;
+  margin-left: 17px;
 `;
 export const HeadingTiteld = styled.p`
   margin-top: 9px;
-  font-size: 24px;
+  font-size: 17px;
   padding: 5px;
   text-align: left;
-  margin-left: 7px;
+  margin-left: 17px;
+`;
+
+export const UpdateInfoButton = styled.button`
+  border-radius: 6px;
+  padding: 0.3rem 1.2rem;
+  margin-top: 35px;
+  margin-left: 35px;
+  margin-bottom: 15px;
+  font-size: 23px;
+  background: transparent;
+  color: black;
+  border: 1px solid #4caf50;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1);
+    background-color: #4caf50;
+  }
 `;

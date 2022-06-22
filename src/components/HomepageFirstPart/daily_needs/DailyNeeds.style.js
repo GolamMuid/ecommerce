@@ -23,22 +23,6 @@ border-bottom: solid 1px ${props => props.theme.color.borderPrimary};
 margin-bottom: 10px;
 `
 
-export const SeeMoreButton = styled.button`
-display: block;
-margin: 10px auto;
-background-color: ${props => props.theme.color.invertedBg};
-font-size: 1rem;
-padding: 10px;
-color: ${props => props.theme.color.invertedPrimary};
-border-radius: 6px;
-transition: all 0.3s ease;
-cursor: pointer;
-&:hover{
-    background-color: ${props => props.theme.color.bg};
-    color: ${props => props.theme.color.secondary};
-}
-`
-
 export const DailyNeedsProductsContainer = styled.div`
 display: grid;
 grid-template-columns: repeat(5, 1fr);

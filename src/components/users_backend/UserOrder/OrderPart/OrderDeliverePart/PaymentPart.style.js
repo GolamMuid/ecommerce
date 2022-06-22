@@ -8,11 +8,11 @@ export const PaymentPartContainer = styled.div`
 
 export const PaymentTextContainer = styled.div`
   margin-right: 15px;
-  margin-top: 5px;
+  margin-top: 1px;
 `;
 
 export const DateContainer = styled.p`
   /* margin-right: 15px; */
-  margin: 0.5em 0.3em;
-  padding: 0.25em 1em;
+  margin: 0.4em 0.3em;
+  padding: 0.25em 0.8em;
 `;

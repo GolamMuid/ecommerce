@@ -3,20 +3,17 @@ import { SameStoreItemContainer, SameStoreItemImage, SameStoreItemName, SameStor
 import { BsStar } from 'react-icons/bs'
 
 
-function SameStoreItem() {
+function SameStoreItem(props) {
     return (
         <SameStoreItemContainer>
             <SameStoreItemImage>
-                <img
-                    src={`${process.env.PUBLIC_URL}/assets/images/a1.jpg`}
-                    alt=""
-                />
+                <img src={process.env.PUBLIC_URL + "/" + props.image} alt="" />
             </SameStoreItemImage>
             <SameStoreItemName>
-                iphone 11 Pro
+                {props.productName}
             </SameStoreItemName>
             <SameStoreItemPrice>
-                $200
+                {props.price}
             </SameStoreItemPrice>
             <SameStoreItemRating>
                 <BsStar />

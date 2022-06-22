@@ -1,6 +1,7 @@
 import React from 'react'
-import { DailyNeedsProductsContainer, DailyNeedsSectionContainer, DailyNeedsSectionTitle, DailyNeedsTitle, SeeMoreButton } from './DailyNeeds.style'
+import { DailyNeedsProductsContainer, DailyNeedsSectionContainer, DailyNeedsSectionTitle, DailyNeedsTitle, LoadMoreContainer, SeeMoreButton } from './DailyNeeds.style'
 import ProductDefault from '../../product_default/ProductDefault'
+import LoadMore from '../../Other Components/LoadMore'
 
 function DailyNeeds() {
     return (
@@ -78,8 +79,8 @@ function DailyNeeds() {
                     oldPrice="$30" productName="Orange" currentPrice="$20" />
             </DailyNeedsProductsContainer>
 
+            <LoadMore />
 
-            <SeeMoreButton> See More </SeeMoreButton>
         </DailyNeedsSectionContainer>
     )
 }

@@ -15,7 +15,7 @@ const PaymentPart = () => {
         06/04/2022
       </DateContainer>
       <PaymentTextContainer>
-        <OrderSmallText>ToTal Payment</OrderSmallText>
+        <OrderSmallText>Total Payment</OrderSmallText>
         <OrderBigText>$12.74</OrderBigText>
       </PaymentTextContainer>
     </PaymentPartContainer>

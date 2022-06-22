@@ -4,6 +4,7 @@ import {
   HeadingTitel,
   HeadingTiteld,
   ProfileAccountDetailsContainer,
+  UpdateInfoButton,
 } from "./ProfileAccountDetails.style";
 
 const ProfileAccountDetails = () => {
@@ -17,7 +18,7 @@ const ProfileAccountDetails = () => {
       <HeadingTiteld>District: Kurigram</HeadingTiteld>
       <HeadingTiteld>Postal Code: 5620</HeadingTiteld>
       <HeadingTiteld>Country: Bangladesh</HeadingTiteld>
-      <UpdateButton>Update Information</UpdateButton>
+      <UpdateInfoButton>Update Information</UpdateInfoButton>
     </ProfileAccountDetailsContainer>
   );
 };
