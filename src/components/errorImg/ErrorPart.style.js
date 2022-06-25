@@ -16,7 +16,6 @@ export const ErrorImage = styled.div`
   justify-content: center;
   overflow: hidden;
   img {
-    /* margin-top: -1rem; */
     max-height: 400px;
     max-width: 100%;
     transition: all 0.3s ease;
@@ -34,5 +33,4 @@ export const ErrorButton = styled.button`
   background: transparent;
   color: red;
   border: 1px solid black;
-
 `;

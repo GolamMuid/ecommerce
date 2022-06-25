@@ -3,7 +3,19 @@ import styled from "styled-components";
 export const DealOfTheWeekContainer = styled.div`
 padding: 10px;
 object-fit: contain;
+overflow: hidden;
+width: 100%;
+/* height: 60vh; */
+  max-width: 100%;
+  max-height: 400px;
+  // CSS Grid/Flexbox bug size workaround
+  // @see https://github.com/kenwheeler/slick/issues/982
+  min-height: 0;
+  min-width: 0;
+  background-color: white;
 `
+
+
 export const DotdTitle = styled.div`
 font-size: 1.125rem;
 font-weight: 500;
@@ -31,7 +43,7 @@ color: ${props => props.theme.color.secondary};
 `
 export const DotdProductImage = styled.div`
 img{
-    max-height: 130px;
+    max-height: 150px;
     max-width: 100%;
     cursor: pointer;
 }

@@ -9,6 +9,9 @@ transition: all 0.3s ease;
 @media (max-width:768px) {
     display: none;
 }
+a:link, a:active, a:visited, a:hover{
+    color: ${props => props.theme.color.secondary}
+}
 `
 export const SubMenuContainer = styled.ul`
 position: absolute;

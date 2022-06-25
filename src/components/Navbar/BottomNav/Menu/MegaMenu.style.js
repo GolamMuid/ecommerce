@@ -57,6 +57,5 @@ text-transform: none;
 transition: all 0.2s ease;
 &:hover{
     transform: translateX(10px);
-    color: blue;
 }
 `

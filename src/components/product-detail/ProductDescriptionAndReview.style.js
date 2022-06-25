@@ -22,6 +22,7 @@ padding: 10px 0;
 export const ProductInfo = styled.div`
 font-size: 0.825rem;
 font-weight: 400;
+line-height: 1.3;
 color: ${props => props.theme.color.secondary};
 `
 export const ProductReviewSectionContainer = styled.div`

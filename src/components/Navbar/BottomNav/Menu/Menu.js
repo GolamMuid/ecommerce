@@ -12,6 +12,7 @@ function Menu() {
             <Link to="/"> <MenuItem> Home  </MenuItem> </Link>
             <MenuItem> Products <IoIosArrowDown />
                 <SubMenuContainer >
+                    <Link to="/allproducts"> <SubMenuItem>All Products</SubMenuItem> </Link>
                     <SubMenuItem>Web Application</SubMenuItem>
                     <SubMenuItem>Website</SubMenuItem>
                     <SubMenuItem>Software Soultion</SubMenuItem>

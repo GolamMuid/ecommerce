@@ -2,5 +2,8 @@ import styled from "styled-components";
 
 export const DeliverdPartContainer = styled.div`
   text-align: center;
-  margin-top: 1px;
+  padding-bottom: 0.2rem;
+`;
+export const BlankContainer = styled.div`
+  display: grid;
 `;

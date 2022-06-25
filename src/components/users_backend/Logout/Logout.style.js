@@ -6,7 +6,7 @@ export const LogoutContainer = styled.div`
   justify-content: right;
   font-size: 1.3em;
   border: none;
-  background: #ffffff;
-  color: darkred;
+  /* background: #ffffff;
+  color: darkred; */
   padding: 0.25em 1em;
 `;

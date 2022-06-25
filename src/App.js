@@ -27,6 +27,8 @@ import Clothing from "./pages/Clothing";
 import Personal from "./pages/Personal";
 import Grocery from "./pages/Grocery";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import Test from "./pages/Test";
+import AllProducts from "./pages/AllProducts";
 
 function App() {
   const theme = {
@@ -73,6 +75,8 @@ function App() {
             <Route path="/personal" element={<Personal />}></Route>
             <Route path="/grocery" element={<Grocery />}></Route>
             <Route path="/detail" element={<ProductDetail />}></Route>
+            <Route path="/allproducts" element={<AllProducts />}></Route>
+            <Route path="/test" element={<Test />}></Route>
 
           </Routes>
           <ScrollToTop />

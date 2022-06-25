@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   CancelButton,
+  DirectLoginPart,
   ForgotPassword,
   HorizontalRule,
   Input,
@@ -9,7 +10,7 @@ import {
   LoginWrapper,
   MainContainer,
   RegistrationText,
-  Sub,
+  SubmitButton,
   WelcomeText,
 } from "./UserLogin.style";
 
@@ -44,6 +45,7 @@ const UserLogin = () => {
               onChange={handleChange}
             />
             <Input
+              style={{ marginBottom: "0.3rem" }}
               type="password"
               placeholder="Password"
               name="password"
@@ -51,28 +53,27 @@ const UserLogin = () => {
             />
 
             <Link to="/order">
-              <Sub type="submit" />
+              <SubmitButton type="submit" />
               {/* <LoginButton type="submit" /> */}
               {/* <LoginButton type="submit">Login</LoginButton> */}
             </Link>
           </InputContainer>
           <HorizontalRule />
-          <ForgotPassword>Forgot Password ?</ForgotPassword>
-          <br />
-          <RegistrationText>
-            <Link style={{ color: "blue" }} to="/registration">
-              NEW USER? PLEASE REGISTER
-            </Link>
-          </RegistrationText>
-          {/* <RegistrationText>NEW USER? PLEASE REGISTER</RegistrationText> */}
-          <br></br>
-          <br></br>
-          <CancelButton>
-            <Link style={{ color: "white" }} to="/">
-              Cancel
-            </Link>
-          </CancelButton>
-          {/* <CancelButton>Cancel</CancelButton> */}
+          <DirectLoginPart>
+            <ForgotPassword>Forgot Password ?</ForgotPassword>
+            <RegistrationText>
+              <Link style={{ color: "blue" }} to="/registration">
+                NEW USER? PLEASE REGISTER
+              </Link>
+            </RegistrationText>
+            {/* <RegistrationText>NEW USER? PLEASE REGISTER</RegistrationText> */}
+            <CancelButton>
+              <Link style={{ color: "white" }} to="/">
+                Cancel
+              </Link>
+            </CancelButton>
+            {/* <CancelButton>Cancel</CancelButton> */}
+          </DirectLoginPart>
         </MainContainer>
       </LoginWrapper>
     </>

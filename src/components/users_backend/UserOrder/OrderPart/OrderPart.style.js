@@ -1,23 +1,25 @@
 import styled from "styled-components";
 
+export const OrderCardContainer = styled.div`
+  display: grid;
+  gap: 1rem;
+  margin-left: 260px;
+  @media (max-width: 768px) {
+    margin-left: 63px;
+  }
+`;
+
 export const OrderPartContainer = styled.div`
   display: grid;
-  margin-left: 270px;
-  @media (max-width: 768px) {
-    margin-left: 75px;
-  }
-  /* grid-template-columns: 1fr 2fr; */
+  gap: 1rem;
+  padding: 1rem;
 `;
 
 export const OrderContainer = styled.div`
-  /* padding: 2px 1px; */
-  margin-left: 15px;
-  margin-top: 20px;
-  margin-right: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  border-radius: 5px;
-  padding: 0.2rem 0rem;
+  gap: 0.3rem;
+  border-radius: 0.3rem;
   background: transparent;
   border: 2px solid #ffffff;
   box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 15%);
@@ -25,45 +27,51 @@ export const OrderContainer = styled.div`
   box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 15%);
   -webkit-box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 15%);
   -moz-box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 15%);
-  /* @media (max-width: 768px) {
-    min-height: 10px;
-  } */
 `;
 
-export const OrderDeliveredButton = styled.div`
-  width: 110px;
-  height: 29px;
+export const OrderButtonContainer = styled.div`
+  display: grid;
+  padding-left: 0.7rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.2rem;
+`;
+export const OrderDeliveredButton = styled.button`
+  border: none;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 0.3rem;
   background: transparent;
-  border-radius: 6px;
+  padding: 0.3rem;
   /* background-color: #42ba96; */
   background: linear-gradient(to right, #ff7a35 10%, #42ba96 79%);
   color: #ffffff;
-  margin: 0.4em 1em;
-  padding: 0.32em 1em;
 `;
 
-export const OrderOnProcessButton = styled.div`
-  width: 120px;
-  height: 29px;
+export const OrderOnProcessButton = styled.button`
+  border: none;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
   background: transparent;
-  border-radius: 6px;
   background-color: #ff7a35;
   color: #ffffff;
-  margin: 0.4em 1em;
-  padding: 0.32em 1em;
 `;
-export const OrderCanceledButton = styled.div`
-  width: 110px;
-  height: 29px;
+export const OrderCanceledButton = styled.button`
+  border: none;
+  width: 6rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
   background: transparent;
-  border-radius: 6px;
-  background-color: #b74c4c;
+  background: linear-gradient(to right, #b74c4c 30%, #ff7a35 90%);
+
   color: #ffffff;
-  margin: 0.4em 1em;
-  padding: 0.32em 1em;
+  /* margin: 0.4em 1em;
+  padding: 0.32em 1em; */
 `;
 export const OrderSmallText = styled.p``;
-export const OrderBigText = styled.h3`
+export const OrderBigText = styled.h4`
   /* font-size: 28px; */
 `;
 
