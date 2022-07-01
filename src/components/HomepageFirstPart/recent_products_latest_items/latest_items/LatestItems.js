@@ -8,7 +8,7 @@ function LatestItems() {
             <LatestItemsTitle>
                 Latest Items
             </LatestItemsTitle>
-            {/* <SeeMoreButton> See More </SeeMoreButton> */}
+            <SeeMoreButton> See More </SeeMoreButton>
             <LatestItemsProductsContainer>
                 <LatestItemsProduct>
                     <LatestItemsProductImage>

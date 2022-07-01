@@ -1,19 +1,18 @@
 import styled from "styled-components";
 
 export const PaymentPartContainer = styled.div`
-  /* display: grid;
+  display: grid;
   grid-template-rows: 1fr 1fr;
-  text-align: right; */
+  text-align: right;
 `;
 
 export const PaymentTextContainer = styled.div`
-  text-align: right;
-  padding-right: 0.6rem;
-  padding-bottom: 0.2rem;
+  margin-right: 15px;
+  margin-top: 1px;
 `;
 
 export const DateContainer = styled.p`
-  text-align: right;
-  padding-top: 0.4rem;
-  padding-right: 0.6rem;
+  /* margin-right: 15px; */
+  margin: 0.4em 0.3em;
+  padding: 0.25em 0.8em;
 `;

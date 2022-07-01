@@ -27,8 +27,8 @@ import Clothing from "./pages/Clothing";
 import Personal from "./pages/Personal";
 import Grocery from "./pages/Grocery";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
-import Test from "./pages/Test";
-import AllProducts from "./pages/AllProducts";
+import Zoom from "./pages/Zoom";
+import ZoomTrial from "./components/product-detail/ZoomTrial";
 
 function App() {
   const theme = {
@@ -51,6 +51,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <GlobalStyle />
+
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/dashbord" element={<Dashboard />}></Route>
@@ -75,10 +76,11 @@ function App() {
             <Route path="/personal" element={<Personal />}></Route>
             <Route path="/grocery" element={<Grocery />}></Route>
             <Route path="/detail" element={<ProductDetail />}></Route>
-            <Route path="/allproducts" element={<AllProducts />}></Route>
-            <Route path="/test" element={<Test />}></Route>
+            <Route path="/zoom" element={<ZoomTrial />}></Route>
+
 
           </Routes>
+
           <ScrollToTop />
         </BrowserRouter>
       </ThemeProvider>

@@ -5,7 +5,8 @@ import {
   InputContainer,
   LoginWrapper,
   MainContainer,
-  SubmitButton,
+  RegistrationText,
+  Sub,
   WelcomeText,
 } from "../UserLogin/UserLogin.style";
 import { RegisterText } from "./UserRegister.style";
@@ -60,7 +61,7 @@ const UserRegister = () => {
             onChange={handleOnBlur}
           />
           <Link to="/login">
-            <SubmitButton type="submit" />
+            <Sub type="submit" />
             {/* <LoginButton type="submit" /> */}
             {/* <LoginButton type="submit">Login</LoginButton> */}
           </Link>

@@ -1,4 +1,5 @@
 import React from "react";
+import { UpdateButton } from "../profilePartInformationHeading/ProfilePartinformationHeading.style";
 import {
   HeadingTitel,
   HeadingTiteld,

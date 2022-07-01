@@ -12,7 +12,7 @@ const ProfilePartMenu = () => {
       <ProfilePartMenuItem>
         <ProfilePartMenuHeding>Account setting</ProfilePartMenuHeding>
         <ProfilePartMenuDiscription>
-          Details your parsonal information
+          Details about your parsonal information
         </ProfilePartMenuDiscription>
       </ProfilePartMenuItem>
       <ProfilePartMenuItem>
