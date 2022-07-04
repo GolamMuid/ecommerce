@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import ProductModal from "../../../ProductModal/ProductModal";
+import ModalDtails from "../../../ProductModal/ModalDtails";
 import {
   OrderBigText,
-  OrderDeliveredButton,
+  OrderButtonContainer,
   OrderOnProcessButton,
   OrderSmallText,
 } from "../OrderPart.style";
@@ -19,19 +20,14 @@ const TransactionOnProcess = () => {
   };
   return (
     <TransactionPartContainer>
-      <OrderOnProcessButton onClick={() => setIsOpen(!isOpen)}>
-        On Process
-      </OrderOnProcessButton>
-      <ProductModal show={isOpen} handleClose={hideModal}>
-        <h1>Your On Progress Product is:</h1>
-        <br />
-        <ol>
-          <h3>Nikon z50 DSLR Camera</h3>
-          <h3>Denim pant for Men</h3>
-          <h3>Nikon z50 DSLR Camera</h3>
-        </ol>
-        <br />
-      </ProductModal>
+      <OrderButtonContainer>
+        <OrderOnProcessButton onClick={() => setIsOpen(!isOpen)}>
+          On Process
+        </OrderOnProcessButton>
+        <ProductModal show={isOpen} handleClose={hideModal}>
+          <ModalDtails />
+        </ProductModal>
+      </OrderButtonContainer>
       <TransactionTextContainer>
         <OrderSmallText>Transaction. ID</OrderSmallText>
         <OrderBigText>#321DERs</OrderBigText>

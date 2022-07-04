@@ -80,5 +80,7 @@ src={`${process.env.PUBLIC_URL}/images/slider_image/s4.jpg`}
 alt=""
 />
 
+<img src={process.env.PUBLIC_URL + "/" + props.image} alt="" />
+
 Mahfuz islam
 npm i react-router-dom

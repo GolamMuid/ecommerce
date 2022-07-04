@@ -43,13 +43,7 @@ function AllProducts() {
                         </SortingDropdownContainer>
                     </SortingContainer>
 
-                    <SortingContainer >
-                        <SortingDropdownContainer>
-                            <SortingDropdownOption> Show: 5 </SortingDropdownOption>
-                            <SortingDropdownOption> Show: 10 </SortingDropdownOption>
-                            <SortingDropdownOption> Show: 15 </SortingDropdownOption>
-                        </SortingDropdownContainer>
-                    </SortingContainer>
+
                 </TitleAndSortContainer>
 
                 <ListGridViewContainer>

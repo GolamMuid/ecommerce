@@ -1,13 +1,14 @@
 import React from 'react'
 import { AddButton, Availability, CategoryAndWishlistContainer, DeliveryInformationContainer, DeliveryType, ImageContainer, ListViewCategory, ListViewProductContainer, ListViewProductDescription, ListViewRating, ListViewTitle, ListViewWishlist, NewPrice, OldPrice, ProductInformationContainer, ProductViewButton } from './ListViewProduct.style'
 import { BsHeart, BsStar } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 function ListViewProduct(props) {
     return (
         <ListViewProductContainer>
             <ImageContainer>
                 <img src={process.env.PUBLIC_URL + "/" + props.image} alt="" />
-                <ProductViewButton> View Product </ProductViewButton>
+                <Link to='/detail'> <ProductViewButton> View Product </ProductViewButton> </Link>
             </ImageContainer>
 
             <ProductInformationContainer>

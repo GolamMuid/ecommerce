@@ -1,6 +1,7 @@
 import React from 'react'
 import { BestRatedContainer, BestRatedProductsContainer, BestRatedTitle, SeeMoreButton } from './BestRated.Style'
 import ProductDefault from '../../product_default/ProductDefault'
+import LoadMore from '../../Other Components/LoadMore'
 // import NewProduct from '../../product_default/NewProduct'
 
 function BestRated() {
@@ -9,7 +10,7 @@ function BestRated() {
             <BestRatedTitle>
                 Best Rated
             </BestRatedTitle>
-            <SeeMoreButton> See More </SeeMoreButton>
+            {/* <SeeMoreButton> See More </SeeMoreButton> */}
             <BestRatedProductsContainer>
 
                 <ProductDefault salePercentage="20%" isNew="true" isSalePercentage="true"
@@ -46,6 +47,8 @@ function BestRated() {
                     oldPrice="$700" productName="Macbook Air" currentPrice="$600" />
 
             </BestRatedProductsContainer>
+
+            <LoadMore />
 
         </BestRatedContainer>
     )

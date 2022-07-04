@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProductImageAndDeliveryDetailContainer = styled.div`
 display: grid;
-grid-template-columns: minmax(0, 2fr) 3fr 2fr;
+grid-template-columns: minmax(0, 3fr) 3fr 2fr;
 padding: 10px;
 column-gap: 10px;
 margin-bottom: 10px;
@@ -13,8 +13,10 @@ margin-bottom: 10px;
 
 export const ProductImageView = styled.div`
 img{
-    max-height: 400px;
+    display: block;
+    margin: auto;
     max-width: 100%;
+    max-height: 400px;
 }
 `
 export const ProductDetails = styled.div`

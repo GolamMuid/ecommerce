@@ -1,13 +1,17 @@
 import React from "react";
-import Logo from "../../Navbar/BottomNav/Logo/Logo";
+import MobileMenu from "../../Navbar/BottomNav/Menu/MobileMenu";
 import { UserNavContainer } from "./UserNavbar.style";
+import UserLogo from "./UserNavbarItem/UserLogo";
 import UserNavbarItem from "./UserNavbarItem/UserNavbarItem";
+import UserNavbarMenu from "./UserNavbarItem/UserNavbarMenu";
 
 function UserNavbar() {
   return (
     <UserNavContainer>
-      <Logo />
+      <UserLogo />
+      <UserNavbarMenu />
       <UserNavbarItem />
+      <MobileMenu />
     </UserNavContainer>
   );
 }

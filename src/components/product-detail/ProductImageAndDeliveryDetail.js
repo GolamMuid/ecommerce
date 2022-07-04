@@ -25,15 +25,11 @@ import { GrLocation } from 'react-icons/gr'
 import { TbTruckDelivery } from 'react-icons/tb'
 import { GiPayMoney, GiReturnArrow } from 'react-icons/gi'
 
+
 import "swiper/css";
 import "swiper/css/thumbs";
 
-import ReactImageMagnify from 'react-image-magnify';
-
-
 function ProductImageAndDeliveryDetail(props) {
-
-
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     const [counter, setCounter] = useState(1);
@@ -55,20 +51,21 @@ function ProductImageAndDeliveryDetail(props) {
                     className="mySwiper2">
 
                     <SwiperSlide>
-
-
                         <img src={process.env.PUBLIC_URL + "/" + props.image1} alt="" />
-
                     </SwiperSlide>
+
                     <SwiperSlide>
                         <img src={process.env.PUBLIC_URL + "/" + props.image2} alt="" />
                     </SwiperSlide>
+
                     <SwiperSlide>
                         <img src={process.env.PUBLIC_URL + "/" + props.image3} alt="" />
                     </SwiperSlide>
+
                     <SwiperSlide>
                         <img src={process.env.PUBLIC_URL + "/" + props.image4} alt="" />
                     </SwiperSlide>
+
 
                 </Swiper>
 

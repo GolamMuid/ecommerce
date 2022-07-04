@@ -9,9 +9,15 @@ function Menu() {
     return (
 
         <MenuContainer>
-            <Link to="/"> <MenuItem> Home  </MenuItem> </Link>
+            <Link to="/"> <MenuItem> Home
+                <SubMenuContainer>
+                    <Link to="/home2"> <SubMenuItem>Home two</SubMenuItem> </Link>
+                    <Link to="/home3"> <SubMenuItem>Home three</SubMenuItem> </Link>
+                </SubMenuContainer>
+            </MenuItem> </Link>
             <MenuItem> Products <IoIosArrowDown />
                 <SubMenuContainer >
+                    <Link to="/allproducts"> <SubMenuItem>All Products</SubMenuItem> </Link>
                     <SubMenuItem>Web Application</SubMenuItem>
                     <SubMenuItem>Website</SubMenuItem>
                     <SubMenuItem>Software Soultion</SubMenuItem>

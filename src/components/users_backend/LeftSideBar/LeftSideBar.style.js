@@ -1,52 +1,45 @@
 import styled from "styled-components";
 
-export const Sidebar = styled.div`
-  height: 100vh;
-`;
-
 // --primary: #0091ff;
 // --dark: #061b28;
 // --gray: #756388;
 // --light: #ffffff;
 
 export const SidebarCotainer = styled.div`
+  /* border: 1px solid red; */
+  /* display: flex;
+  flex-direction: column; */
+  display: grid;
   background-color: #061b28;
-  /* width: 300px;
-  height: 100vh; */
-  /* position: fixed; */
-  /* height: 100vh; */
   color: #ffffff;
   height: 100%;
-  width: 250px;
+  width: 14rem;
   position: fixed;
-  /* transition: 0.4s; */
   @media (max-width: 768px) {
     width: 65px;
   }
+  //..
 `;
 
-export const SidebarCotainerNX = styled.div`
-  width: 85px;
-`;
-
-export const NavUpper = styled.div`
-  display: grid;
-`;
 export const NavHeading = styled.div`
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr;
-  height: 75px;
+  padding: 0.5rem 0rem 0.5rem 1rem;
+  border: 2px solid green;
 `;
 
 export const NavBrand = styled.div`
-  display: flex;
-  color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center; */
+  gap: 1rem;
+  border: 2px solid red;
+  /* color: #ffffff; */
 `;
 
 export const Name = styled.h1`
-  margin-top: 20px;
-  margin-left: 20px;
+  border: 2px solid green;
   @media (max-width: 768px) {
     font-size: 15px;
     margin-left: 4px;
@@ -55,12 +48,7 @@ export const Name = styled.h1`
 `;
 
 export const LogoSize = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 70px;
-  margin-left: 10px;
-  margin-top: 4px;
+  border: 2px solid green;
   cursor: pointer;
   @media (max-width: 768px) {
     display: none;
@@ -68,51 +56,63 @@ export const LogoSize = styled.div`
 `;
 
 export const NavMenu = styled.div`
+  /* border: 2px solid green; */
   display: grid;
-  grid-template-rows: repeat(7, 1fr);
-  margin-top: 50px;
-`;
-
-export const linkRemove = styled.div`
-  text-decoration: "none";
+  margin-top: 2rem;
+  gap: 0.21rem;
+  grid-template-rows: repeat(12, 1fr);
+  @media (max-width: 768px) {
+    display: grid;
+    gap: 0.21rem;
+  }
 `;
 
 export const MenuItem = styled.div`
-  height: 57px;
+  /* border: 2px solid red; */
+  padding: 0.5rem 1.5rem;
   display: flex;
+  gap: 1rem;
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-left: 40px;
-  border-radius: 10px;
-  border-color: blue;
   @media (max-width: 768px) {
     display: flex;
-    height: 57px;
+    padding: 0.5rem 0rem;
+    align-items: center;
+    justify-content: center;
+  }
+  &:hover {
+    background: #9acded;
+    color: black;
   }
 `;
-export const MenuItemImg = styled.div`
-  width: 30px;
-  @media (max-width: 768px) {
-    margin-right: 15px;
-    margin-left: -20px;
-  }
-`;
+// export const MenuItemImg = styled.div`
+//   /* border: 2px solid green; */
+//   /* width: 30px; */
+//   @media (max-width: 768px) {
+//     margin-right: 15px;
+//     margin-left: -20px;
+//   }
+// `;
 export const IconItem = styled.div`
-  width: 30px;
-  font-size: 30px;
+  /* border: 2px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+
+  /* width: 30px; */
+  /* font-size: 30px; */
 
   @media (max-width: 768px) {
-    margin-right: 15px;
-    margin-left: -20px;
   }
 `;
 
 export const MenuName = styled.p`
-  margin-top: 5px;
-  margin-left: 20px;
-  margin-right: 20px;
-  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   @media (max-width: 768px) {
     display: none;
   }

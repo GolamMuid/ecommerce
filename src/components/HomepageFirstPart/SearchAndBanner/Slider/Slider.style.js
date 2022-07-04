@@ -12,9 +12,13 @@ export const SliderItem = styled.div`
 position: relative;
 `
 export const SliderImageContainer = styled.div`
+overflow: hidden;
 img{
+    top: 0;
 object-fit: contain;
 max-height: 400px;
+/* max-height: 90%; */
+/* max-height: 65vh; */
 /* min-width: 713px; */
 width: 100%;
 display: block;

@@ -2,7 +2,7 @@ import React from 'react'
 import { AddToCartButton, NewContainer, NewText, ProductDefaultContainer, ProductImage, SalePercentageContainer, WishlistViewCompare, WishlistViewCompareContainer, ProductNameRatingPriceContainer, ProductRating, ProductOldPrice, ProductName, ProductCurrentPrice } from './ProductDefault.style'
 import { BsEye, BsHeart, BsStar } from 'react-icons/bs'
 import { FiRefreshCw } from 'react-icons/fi'
-
+import { Link } from 'react-router-dom'
 
 function ProductDefault(props) {
     return (
@@ -25,7 +25,7 @@ function ProductDefault(props) {
                     <BsHeart />
                 </WishlistViewCompare>
                 <WishlistViewCompare>
-                    <BsEye />
+                    <Link to="/detail">  <BsEye /> </Link>
                 </WishlistViewCompare>
                 <WishlistViewCompare>
                     <FiRefreshCw />

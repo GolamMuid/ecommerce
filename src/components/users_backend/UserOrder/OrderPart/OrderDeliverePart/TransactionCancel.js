@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import ModalDtails from "../../../ProductModal/ModalDtails";
 import ProductModal from "../../../ProductModal/ProductModal";
 import {
   OrderBigText,
+  OrderButtonContainer,
   OrderCanceledButton,
   OrderSmallText,
 } from "../OrderPart.style";
@@ -18,19 +20,14 @@ const TransactionCancel = () => {
   };
   return (
     <TransactionPartContainer>
-      <OrderCanceledButton onClick={() => setIsOpen(!isOpen)}>
-        Canceled
-      </OrderCanceledButton>
-      <ProductModal show={isOpen} handleClose={hideModal}>
-        <h1>Your Canceled Product is:</h1>
-        <br />
-        <ol>
-          <h3>Premium School Bag</h3>
-
-          <h3>Timezone Wrist Watch</h3>
-        </ol>
-        <br />
-      </ProductModal>
+      <OrderButtonContainer>
+        <OrderCanceledButton onClick={() => setIsOpen(!isOpen)}>
+          Canceled
+        </OrderCanceledButton>
+        <ProductModal show={isOpen} handleClose={hideModal}>
+          <ModalDtails />
+        </ProductModal>
+      </OrderButtonContainer>
       <TransactionTextContainer>
         <OrderSmallText>Transaction. ID</OrderSmallText>
         <OrderBigText>#321DERs</OrderBigText>

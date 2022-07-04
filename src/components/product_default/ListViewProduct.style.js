@@ -30,7 +30,7 @@ export const ProductViewButton = styled.button`
 display: block;
 margin: auto;
 padding: 10px 20px;
-width: 80%;
+/* width: 80%; */
 background-color: ${props => props.theme.color.bgSecondary};
 border: none;
 text-transform: uppercase;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const RecentProductsContainer = styled.div`
 position: relative;
+padding: 10px;
 `
 export const RecentProductsTitle = styled.div`
 font-size: 1.125rem;
@@ -53,8 +54,8 @@ padding: 10px 0;
 export const RecentProductsRating = styled.div`
 font-size: 1rem;
 color: ${props => props.theme.color.rating};
-cursor: pointer;`
-
+cursor: pointer;
+`
 export const RecentProductsPriceNew = styled.div`
 font-size: 1.125rem;
 font-weight: 500;

@@ -4,6 +4,9 @@ export const ProductDefaultContainer = styled.div`
 position: relative;
 cursor: pointer;
 background-color: ${props => props.theme.color.bg};
+a:link, a:active , a:visited {
+    color: ${props => props.theme.color.primary};
+}
 `
 export const NewContainer = styled.div`
 width: 0;
@@ -61,7 +64,7 @@ font-size: 1.125rem;
 padding: 8px;
 border: solid 1px ${props => props.theme.color.borderPrimary};
 transition: all 0.3s ease;
-&:hover{
+&:hover, a:hover{
     background-color: ${props => props.theme.color.invertedBg};
     color: ${props => props.theme.color.invertedPrimary}
 }
@@ -120,6 +123,7 @@ display: grid;
 grid-template-columns: 3fr 1fr;
 padding: 60px 10px 10px;
 row-gap: 10px;
+column-gap: 10px;
 `
 export const ProductRating = styled.div`
 color: ${props => props.theme.color.rating};

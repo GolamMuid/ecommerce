@@ -9,7 +9,7 @@ color: ${props => props.theme.color.invertedPrimary};
 font-size: 1rem;
 background-color: ${props => props.theme.color.secondary};
 cursor: pointer;
-z-index: 1;
+z-index: 2;
 border: solid 2px white;
 `
 export default ScrollToTopContainer

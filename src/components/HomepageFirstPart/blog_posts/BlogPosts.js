@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { BlogPostsContainer, BlogPostsImage, BlogPostsItem, BlogPostsItemContainer, BlogPostsItemDate, BlogPostsItemDescription, BlogPostsItemTitle, BlogPostsTitle } from './BlogPosts.style'
 import { BsCalendar2Date } from 'react-icons/bs'
 
@@ -11,22 +12,24 @@ function BlogPosts() {
             </BlogPostsTitle>
             <BlogPostsItemContainer>
                 <BlogPostsItem>
-                    <BlogPostsImage>
-                        <img
-                            src={`${process.env.PUBLIC_URL}/assets/images/Blog/storage.jpg`}
-                            alt=""
-                        />
-                    </BlogPostsImage>
+                    <Link to="blog-detail">
+                        <BlogPostsImage>
+                            <img
+                                src={`${process.env.PUBLIC_URL}/assets/images/Blog/storage.jpg`}
+                                alt=""
+                            />
+                        </BlogPostsImage>
 
-                    <BlogPostsItemTitle>
-                        Our Product Storage
-                    </BlogPostsItemTitle>
-                    <BlogPostsItemDescription>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut odio facilisis, pulvinar velit sit amet, mollis tellus. Fusce eu neque scelerisque,
-                    </BlogPostsItemDescription>
-                    <BlogPostsItemDate>
-                        <BsCalendar2Date />  03.09.22
-                    </BlogPostsItemDate>
+                        <BlogPostsItemTitle>
+                            Our Product Storage
+                        </BlogPostsItemTitle>
+                        <BlogPostsItemDescription>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut odio facilisis, pulvinar velit sit amet, mollis tellus. Fusce eu neque scelerisque,
+                        </BlogPostsItemDescription>
+                        <BlogPostsItemDate>
+                            <BsCalendar2Date />  03.09.22
+                        </BlogPostsItemDate>
+                    </Link>
                 </BlogPostsItem>
 
                 <BlogPostsItem>

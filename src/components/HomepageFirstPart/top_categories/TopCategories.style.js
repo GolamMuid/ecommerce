@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TopCategoriesContainer = styled.div`
 padding: 10px 40px 40px;
-background-color: #FFB74F;
+background-color: ${props => props.theme.color.bgTertiary};
 `
 export const TopCategoriesTitle = styled.div`
 font-size: 1.125rem;
@@ -20,7 +20,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding: 40px;
-background-color: ${props => props.theme.color.bgTertiary};
+background-color: ${props => props.theme.color.bg};
 border-radius: 10px;
 border: none;
 height: 230px;

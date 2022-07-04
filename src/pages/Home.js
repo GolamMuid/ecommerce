@@ -10,6 +10,7 @@ import BestRated from "../components/HomepageFirstPart/best_rated/BestRated";
 import DailyNeeds from "../components/HomepageFirstPart/daily_needs/DailyNeeds";
 import BlogPosts from "../components/HomepageFirstPart/blog_posts/BlogPosts";
 import ProductDefault from "../components/product_default/ProductDefault";
+import MultiCategory from "../components/HomepageFirstPart/multi_category/MultiCategory";
 
 function Home() {
   return (
@@ -22,6 +23,7 @@ function Home() {
       {/* <ProductDefault salePercentage="20%" image="assets/images/ps.jpg" oldPrice="$200" productName="Iphone 11" currentPrice="$200" /> */}
       <BestRated />
       <DailyNeeds />
+      <MultiCategory />
       <BlogPosts />
       <Footer />
       <ScrollToTop />

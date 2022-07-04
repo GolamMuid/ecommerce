@@ -27,8 +27,15 @@ import Clothing from "./pages/Clothing";
 import Personal from "./pages/Personal";
 import Grocery from "./pages/Grocery";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
-import Zoom from "./pages/Zoom";
-import ZoomTrial from "./components/product-detail/ZoomTrial";
+import Test from "./pages/Test";
+import AllProducts from "./pages/AllProducts";
+import ScrollFromStart from "./components/Other Components/ScrollFromStart";
+import Cart from "./pages/Cart";
+import Home2 from "./pages/Home2";
+import Home3 from "./pages/Home3";
+// import BlogDetailPage from "./pages/BlogDetailPage";
+import BlogDescription from "./pages/BlogDescription";
+import Checkout from "./pages/Checkout";
 
 function App() {
   const theme = {
@@ -51,7 +58,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <GlobalStyle />
-
+          <ScrollFromStart />
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/dashbord" element={<Dashboard />}></Route>
@@ -76,11 +83,16 @@ function App() {
             <Route path="/personal" element={<Personal />}></Route>
             <Route path="/grocery" element={<Grocery />}></Route>
             <Route path="/detail" element={<ProductDetail />}></Route>
-            <Route path="/zoom" element={<ZoomTrial />}></Route>
-
+            <Route path="/allproducts" element={<AllProducts />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
+            <Route path="/home2" element={<Home2 />}></Route>
+            <Route path="/home3" element={<Home3 />}></Route>
+            {/* <Route path="/blog-detail" element={<BlogDetailPage />}></Route> */}
+            <Route path="/blog-description" element={<BlogDescription />}></Route>
+            <Route path="/checkout" element={<Checkout />}></Route>
+            <Route path="/test" element={<Test />}></Route>
 
           </Routes>
-
           <ScrollToTop />
         </BrowserRouter>
       </ThemeProvider>
