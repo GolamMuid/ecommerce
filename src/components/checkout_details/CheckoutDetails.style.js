@@ -18,13 +18,13 @@ font-size: 1rem;
 font-weight: 500;
 padding: 10px 0;
 `
-export const CountrySelect = styled.select`
+export const DropdownSelect = styled.select`
 border: none;
 padding: 10px;
 background-color: ${props => props.theme.color.bgSecondary};
 font-size: 1rem;
 `
-export const CountryOptions = styled.option`
+export const DropdownOptions = styled.option`
 
 `
 export const GridContainer = styled.div`

@@ -21,13 +21,13 @@ function ProductDefault(props) {
                 </SalePercentageContainer>
             }
             <WishlistViewCompareContainer>
-                <WishlistViewCompare>
+                <WishlistViewCompare title='Add to Wishlist'>
                     <BsHeart />
                 </WishlistViewCompare>
-                <WishlistViewCompare>
+                <WishlistViewCompare title='View Product'>
                     <Link to="/detail">  <BsEye /> </Link>
                 </WishlistViewCompare>
-                <WishlistViewCompare>
+                <WishlistViewCompare title='Compare'>
                     <FiRefreshCw />
                 </WishlistViewCompare>
             </WishlistViewCompareContainer>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { CartCheckoutButton, CheckoutCostAmount, CheckoutCostContainer, CheckoutCostType, CheckoutDetailsContainer, CheckoutForm, CheckoutInformationContainer, CheckoutInput, CheckoutInputHalf, CheckoutLabel, CountryOptions, CountrySelect, GridCell, GridContainer, OrderSummary, OrderSummaryTitle } from './CheckoutDetails.style'
+import { CartCheckoutButton, CheckoutCostAmount, CheckoutCostContainer, CheckoutCostType, CheckoutDetailsContainer, CheckoutForm, CheckoutInformationContainer, CheckoutInput, CheckoutInputHalf, CheckoutLabel, DropdownOptions, DropdownSelect, GridCell, GridContainer, OrderSummary, OrderSummaryTitle } from './CheckoutDetails.style'
 import CheckoutProductModel from './CheckoutProductModel'
 
 function CheckoutDetails() {
@@ -8,63 +8,61 @@ function CheckoutDetails() {
         <CheckoutDetailsContainer>
             <CheckoutInformationContainer>
                 <CheckoutForm>
-                    <CheckoutLabel>
-                        Country
-                    </CheckoutLabel>
-                    <CountrySelect>
-                        <CountryOptions> Bangladesh </CountryOptions>
-                        <CountryOptions> USA </CountryOptions>
-                    </CountrySelect>
                     <GridContainer>
                         <GridCell>
                             <CheckoutLabel>
-                                First Name
+                                Country
                             </CheckoutLabel>
-                            <CheckoutInput />
+                            <DropdownSelect>
+                                <DropdownOptions> Bangladesh </DropdownOptions>
+                                <DropdownOptions> USA </DropdownOptions>
+                            </DropdownSelect>
                         </GridCell>
                         <GridCell>
                             <CheckoutLabel>
-                                Last Name
+                                City
                             </CheckoutLabel>
-                            <CheckoutInput />
+                            <DropdownSelect>
+                                <DropdownOptions> Dhaka </DropdownOptions>
+                                <DropdownOptions> Rajshahi </DropdownOptions>
+                                <DropdownOptions> Barishal </DropdownOptions>
+                                <DropdownOptions> Chattogram </DropdownOptions>
+                                <DropdownOptions> Khulna </DropdownOptions>
+                                <DropdownOptions> Rangpur </DropdownOptions>
+                                <DropdownOptions> Mymensingh  </DropdownOptions>
+                                <DropdownOptions> Sylhet  </DropdownOptions>
+                            </DropdownSelect>
                         </GridCell>
                     </GridContainer>
+
+                    <CheckoutLabel>
+                        Full Name
+                    </CheckoutLabel>
+                    <CheckoutInput />
+
 
                     <CheckoutLabel>
                         Address 1
                     </CheckoutLabel>
                     <CheckoutInput />
 
-                    <CheckoutLabel>
-                        Address 2
-                    </CheckoutLabel>
-                    <CheckoutInput />
-
                     <GridContainer>
                         <GridCell>
                             <CheckoutLabel>
-                                City
+                                Email Address
                             </CheckoutLabel>
                             <CheckoutInput />
                         </GridCell>
 
                         <GridCell>
                             <CheckoutLabel>
-                                Postal Code / ZIP
+                                Phone no
                             </CheckoutLabel>
                             <CheckoutInput />
                         </GridCell>
                     </GridContainer>
 
-                    <CheckoutLabel>
-                        Email Address
-                    </CheckoutLabel>
-                    <CheckoutInputHalf />
 
-                    <CheckoutLabel>
-                        Phone no
-                    </CheckoutLabel>
-                    <CheckoutInputHalf />
 
                 </CheckoutForm>
             </CheckoutInformationContainer>

@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
+import UserRegister from "../UserRegister/UserRegister";
+import LoginModal from "./LoginModal/LoginModal";
+
 import {
   CancelButton,
   DirectLoginPart,
@@ -7,21 +11,24 @@ import {
   HorizontalRule,
   Input,
   InputContainer,
+  LoginButton,
   LoginWrapper,
   MainContainer,
   RegistrationText,
-  SubmitButton,
   WelcomeText,
 } from "./UserLogin.style";
 
 const UserLogin = () => {
+  // const { user, isLoading } = useAuth();
+
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
   });
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+  const { user, loginUser } = useAuth();
+  // console.log(loginData);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -31,51 +38,109 @@ const UserLogin = () => {
     newLoginData[field] = value;
     setLoginData(newLoginData);
   };
+
+  const handleLoginSubmit = (event) => {
+    loginUser(loginData.email, loginData.password, location, navigate);
+    event.preventDefault();
+  };
+
+  // const [isOpen, setIsOpen] = useState(false);
+
+  // const hideModal = () => {
+  //   setIsOpen(false);
+  // };
+
+  // const handleLoginSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   const { email, password } = loginData;
+  //   fetch("http://localhost:4002/api/auth/login", {
+  //     method: "POST",
+  //     headers: {
+  //       "content-type": "application/json",
+  //     },
+  //     body: JSON.stringify({ email, password }),
+  //   })
+  //     .then((res) => {
+  //       if (res.status === 400 || res.status === 401) {
+  //         alert("Invalid login");
+  //       }
+  //       return res.json();
+  //     })
+
+  //     .then((Data) => {
+  //       if (Data.success) {
+  //         console.log(Data.email);
+  //         localStorage.setItem("accessToken", Data.accessToken);
+  //         localStorage.setItem("user-email", Data.email);
+  //         console.log(Data.email);
+  //         navigate("/dashbord");
+  //         // window.location.reload();
+  //       }
+  //       console.log(Data);
+  //       // window.location.reload();
+  //     });
+  // };
+
   return (
     <>
-      <LoginWrapper>
-        <MainContainer>
-          <WelcomeText>Welcome</WelcomeText>
+      {/* <LoginWrapper> */}
+      <MainContainer>
+        <WelcomeText>Welcome</WelcomeText>
 
-          <InputContainer onSubmit={handleSubmit}>
-            <Input
-              type="email"
-              placeholder="Email"
-              name="email"
-              onChange={handleChange}
-            />
-            <Input
-              style={{ marginBottom: "0.3rem" }}
-              type="password"
-              placeholder="Password"
-              name="password"
-              onChange={handleChange}
-            />
+        <InputContainer onSubmit={handleLoginSubmit}>
+          <Input
+            type="email"
+            placeholder="Email"
+            name="email"
+            onChange={handleChange}
+          />
 
-            <Link to="/order">
-              <SubmitButton type="submit" />
-              {/* <LoginButton type="submit" /> */}
-              {/* <LoginButton type="submit">Login</LoginButton> */}
+          <Input
+            style={{ marginBottom: "0.3rem" }}
+            type="password"
+            placeholder="Password"
+            name="password"
+            onChange={handleChange}
+          />
+
+          <LoginButton type="submit">Login</LoginButton>
+          {/* {isLoading && <Spinner />} */}
+          {/* {user?.email && (
+              <Alert severity="success">Login successfully!</Alert>
+            )}
+            {authError && <Alert severity="error">{authError}</Alert>} */}
+        </InputContainer>
+        <HorizontalRule />
+        <DirectLoginPart>
+          <ForgotPassword>Forgot Password ?</ForgotPassword>
+
+          {/* <RegistrationText onClick={() => setIsOpen(!isOpen)}>
+            Already Registered? Please Login
+          </RegistrationText>
+          <LoginModal show={isOpen} handleClose={hideModal}>
+            <UserRegister />
+          </LoginModal> */}
+          <RegistrationText>
+            <Link style={{ color: "blue" }} to="/registration">
+              NEW USER? PLEASE REGISTER
             </Link>
-          </InputContainer>
-          <HorizontalRule />
-          <DirectLoginPart>
-            <ForgotPassword>Forgot Password ?</ForgotPassword>
-            <RegistrationText>
-              <Link style={{ color: "blue" }} to="/registration">
-                NEW USER? PLEASE REGISTER
-              </Link>
-            </RegistrationText>
-            {/* <RegistrationText>NEW USER? PLEASE REGISTER</RegistrationText> */}
-            <CancelButton>
-              <Link style={{ color: "white" }} to="/">
-                Cancel
-              </Link>
-            </CancelButton>
-            {/* <CancelButton>Cancel</CancelButton> */}
-          </DirectLoginPart>
-        </MainContainer>
-      </LoginWrapper>
+            {/* <Link onClick={() => setIsOpen(!isOpen)}>
+              NEW USER? PLEASE REGISTER
+            </Link> */}
+            {/* <LoginModal show={isOpen} handleClose={hideModal}>
+              <UserRegister />
+            </LoginModal> */}
+          </RegistrationText>
+          <CancelButton>
+            <Link style={{ color: "white" }} to="/">
+              Cancel
+            </Link>
+          </CancelButton>
+          {/* {isLoading && <Spinner />} */}
+        </DirectLoginPart>
+      </MainContainer>
+      {/* </LoginWrapper> */}
     </>
   );
 };

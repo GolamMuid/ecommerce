@@ -1,10 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { CartViewWishlist, CartViewWishlistContainer, Category, CurrentPrice, ImageAndNameContainer, ImageContainer, NameAndPriceContainer, OldPrice, ProductName, ProductPriceContainer, ProductRating, RecentProductModelContainer } from './RecentProductModel.style'
 import { BsEye, BsHeart, BsStar, BsCartPlus } from 'react-icons/bs'
 import { FiRefreshCw } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
+import CartContext from '../../contexts/CartContext/CartContext'
 
 function RecentProductModel(props) {
+
+    const { addToCart } = useContext(CartContext)
+
     return (
         <RecentProductModelContainer>
             <ImageAndNameContainer>
@@ -27,28 +31,28 @@ function RecentProductModel(props) {
                     </ProductRating>
                     <ProductPriceContainer>
                         <CurrentPrice>
-                            {props.currentPrice}
+                            $ {props.currentPrice}
                         </CurrentPrice>
                         <OldPrice>
-                            {props.oldPrice}
+                            $ {props.oldPrice}
                         </OldPrice>
 
                     </ProductPriceContainer>
                     <CartViewWishlistContainer>
-                        <CartViewWishlist>
+                        <CartViewWishlist title='Add to Wishlist'>
                             <BsHeart />
                         </CartViewWishlist>
 
-                        <CartViewWishlist>
+                        <CartViewWishlist title='View Product'>
                             <Link to='/detail'>  <BsEye />  </Link>
                         </CartViewWishlist>
 
-                        <CartViewWishlist>
+                        <CartViewWishlist title='Compare'>
                             <FiRefreshCw />
                         </CartViewWishlist>
 
-                        <CartViewWishlist>
-                            <BsCartPlus />
+                        <CartViewWishlist title='Add to Cart'>
+                            <BsCartPlus onClick={() => addToCart(props.index)} />
                         </CartViewWishlist>
 
                     </CartViewWishlistContainer>

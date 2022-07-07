@@ -7,6 +7,7 @@ export const OrderCardContainer = styled.div`
   margin-right: 0.7rem;
   @media (max-width: 768px) {
     margin-left: 63px;
+    margin-top: -2.5rem;
   }
 `;
 

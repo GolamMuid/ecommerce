@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import CartAdditionalInfo from '../components/cart_page_components/CartAdditionalInfo'
@@ -11,7 +11,8 @@ import Navbar from '../components/Navbar/Navbar'
 import BlankSpace from '../components/Other Components/BlankSpace'
 import PageTitle from '../components/page_title/PageTitle'
 import SearchAndCart from '../components/search_cart/SearchAndCart'
-import cartItems from '../dummy_data/CartData'
+import CartContext from '../contexts/CartContext/CartContext'
+import cartItems from '../data/CartData'
 
 function Cart() {
 
@@ -23,6 +24,9 @@ function Cart() {
     // const deleteItem = (index) => {
     //     console.log(index)
     // }
+
+    const { addToCart } = useContext(CartContext)
+
 
     return (
         <>

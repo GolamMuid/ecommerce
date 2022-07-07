@@ -1,40 +1,79 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import LoginModal from "../UserLogin/LoginModal/LoginModal";
+import UserLogin from "../UserLogin/UserLogin";
+// import useAuth from "../../../hooks/useAuth";
 import {
   Input,
   InputContainer,
+  LoginButton,
   LoginWrapper,
   MainContainer,
-  SubmitButton,
   WelcomeText,
 } from "../UserLogin/UserLogin.style";
 import { RegisterText } from "./UserRegister.style";
 
 const UserRegister = () => {
-  const [user, setUser] = useState({
+  const [registerData, setRegisterData] = useState({
     name: "",
     phone: "",
     email: "",
     password: "",
   });
+  // const { isLoading } = useAuth();
+
+  const navigate = useNavigate();
 
   const handleOnBlur = (e) => {
     const field = e.target.name;
     const value = e.target.value;
-    const newUserData = { ...user };
-    newUserData[field] = value;
-    setUser(newUserData);
+    const newRegisterData = { ...registerData };
+    newRegisterData[field] = value;
+    setRegisterData(newRegisterData);
   };
 
-  const handleLoginSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const { name, phone, email, password } = registerData;
+    console.log(name, email);
+    const res = await fetch("http://localhost:4002/api/auth/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        phone,
+        email,
+        password,
+      }),
+    });
+    const data = await res.json();
+
+    if (res.status === 422 || !data) {
+      alert("Invalid registration");
+      console.log("Invalid registration");
+    } else if (res.status === 409) {
+      alert("this email is allredy register please login !!");
+    } else {
+      alert("Successfully registration");
+      console.log("Successfully registration");
+
+      navigate("/login");
+    }
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const hideModal = () => {
+    setIsOpen(false);
   };
 
   return (
     <LoginWrapper>
       <MainContainer>
         <WelcomeText>Register Here</WelcomeText>
-        <InputContainer>
+        <InputContainer onSubmit={handleSubmit}>
           <Input
             type="text"
             placeholder="name"
@@ -59,17 +98,21 @@ const UserRegister = () => {
             name="password"
             onChange={handleOnBlur}
           />
-          <Link to="/login">
-            <SubmitButton type="submit" />
-            {/* <LoginButton type="submit" /> */}
-            {/* <LoginButton type="submit">Login</LoginButton> */}
-          </Link>
+          <LoginButton type="submit">Register</LoginButton>
         </InputContainer>
-        <RegisterText>
+
+        <RegisterText onClick={() => setIsOpen(!isOpen)}>
+          Already Registered? Please Login
+        </RegisterText>
+        <LoginModal show={isOpen} handleClose={hideModal}>
+          <UserLogin />
+        </LoginModal>
+
+        {/* <RegisterText>
           <Link style={{ color: "blue" }} to="/login">
             Already Registered? Please Login
           </Link>
-        </RegisterText>
+        </RegisterText> */}
       </MainContainer>
     </LoginWrapper>
   );

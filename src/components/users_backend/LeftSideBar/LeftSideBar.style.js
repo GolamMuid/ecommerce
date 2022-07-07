@@ -13,10 +13,12 @@ export const SidebarCotainer = styled.div`
   background-color: #061b28;
   color: #ffffff;
   height: 100%;
+  margin-top: -0.6rem;
   width: 14rem;
   position: fixed;
   @media (max-width: 768px) {
     width: 65px;
+    margin-top: -2.5rem;
   }
   //..
 `;

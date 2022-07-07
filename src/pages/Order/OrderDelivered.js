@@ -1,13 +1,16 @@
 import React from "react";
-import UserBlankSpace from "../../components/users_backend/UserBlankSpace/UserBlankSpace";
-import UserNavbar from "../../components/users_backend/UserNavbar/UserNavbar";
+import Navbar from "../../components/Navbar/Navbar";
+import BlankSpace from "../../components/Other Components/BlankSpace";
+// import UserBlankSpace from "../../components/users_backend/UserBlankSpace/UserBlankSpace";
+// import UserNavbar from "../../components/users_backend/UserNavbar/UserNavbar";
 import UserOrderDelivered from "../../components/users_backend/UserOrder/UserOrderDelivered/UserOrderDelivered";
 
 const OrderDelivered = () => {
   return (
     <>
-      <UserNavbar />
-      <UserBlankSpace />
+      {/* <UserNavbar /> */}
+      <Navbar />
+      <BlankSpace />
       <UserOrderDelivered />
     </>
   );

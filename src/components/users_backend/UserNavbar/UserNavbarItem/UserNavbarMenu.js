@@ -6,6 +6,7 @@ import {
   MegaMenuSubItem,
   MegaMenuSubItemContainer,
 } from "../../../Navbar/BottomNav/Menu/MegaMenu.style";
+
 import {
   LinkButton,
   UserMegaMenuContainer,
@@ -23,9 +24,35 @@ const UserNavbarMenu = () => {
   return (
     <>
       <UserMenuContainer>
+        {/* <Link to="/"> <MenuItem> Home
+                <SubMenuContainer>
+                    <Link to="/home2"> <SubMenuItem>Home 2nd Design</SubMenuItem> </Link>
+                    <Link to="/home3"> <SubMenuItem>Home 3rd Design</SubMenuItem> </Link>
+                </SubMenuContainer>
+            </MenuItem> </Link> */}
+
         <UserMenuItem>
           <Link to="/">
             <LinkButton> Home </LinkButton>
+            <UserSubMenuContainer>
+              tttttttttt
+              <Link to="/allproducts">
+                <UserSubMenuItem>All Products</UserSubMenuItem>
+              </Link>
+              <Link to="/allproducts">
+                <UserSubMenuItem>All Products</UserSubMenuItem>
+              </Link>
+            </UserSubMenuContainer>
+            {/* <SubMenuContainer>
+              <Link to="/home2">
+                
+                <SubMenuItem>Home 2nd Design</SubMenuItem>
+              </Link>
+              <Link to="/home3">
+                
+                <SubMenuItem>Home 3rd Design</SubMenuItem>
+              </Link>
+            </SubMenuContainer> */}
           </Link>
         </UserMenuItem>
 

@@ -37,6 +37,11 @@ import Home3 from "./pages/Home3";
 import BlogDescription from "./pages/BlogDescription";
 import Checkout from "./pages/Checkout";
 
+import AuthProvider from "./contexts/AuthProvider/AuthProvider";
+import PrivateRoute from "./components/users_backend/UserLogin/PrivateRoute/PrivateRoute";
+import Product from "./pages/Product/Product";
+import { CartProvider } from "./contexts/CartContext/CartContext";
+
 function App() {
   const theme = {
     color: {
@@ -55,47 +60,63 @@ function App() {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <BrowserRouter>
-          <GlobalStyle />
-          <ScrollFromStart />
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/dashbord" element={<Dashboard />}></Route>
-            <Route path="/profile" element={<Profile />}></Route>
-            <Route path="/order" element={<Order />}></Route>
-            <Route path="/order/delivered" element={<OrderDelivered />}></Route>
-            <Route path="/order/process" element={<OrderOnProgress />}></Route>
-            <Route path="/order/cancel" element={<OrderCanceled />}></Route>
-            <Route path="/login" element={<Login />}></Route>
-            <Route path="/registration" element={<Registration />}></Route>
-            <Route path="*" element={<ErrorImg />} />
-            <Route path="/processor" element={<Processor />}></Route>
-            <Route path="/motherboard" element={<Motherboard />}></Route>
-            <Route path="/ram" element={<Ram />}></Route>
-            <Route path="/tv" element={<Tv />}></Route>
-            <Route path="/camera" element={<Camera />}></Route>
-            <Route path="/headphones" element={<Headphones />}></Route>
-            <Route path="/smartphones" element={<Smartphones />}></Route>
-            <Route path="/music" element={<Music />}></Route>
-            <Route path="/accessories" element={<Accessories />}></Route>
-            <Route path="/clothing" element={<Clothing />}></Route>
-            <Route path="/personal" element={<Personal />}></Route>
-            <Route path="/grocery" element={<Grocery />}></Route>
-            <Route path="/detail" element={<ProductDetail />}></Route>
-            <Route path="/allproducts" element={<AllProducts />}></Route>
-            <Route path="/cart" element={<Cart />}></Route>
-            <Route path="/home2" element={<Home2 />}></Route>
-            <Route path="/home3" element={<Home3 />}></Route>
-            {/* <Route path="/blog-detail" element={<BlogDetailPage />}></Route> */}
-            <Route path="/blog-description" element={<BlogDescription />}></Route>
-            <Route path="/checkout" element={<Checkout />}></Route>
-            <Route path="/test" element={<Test />}></Route>
-
-          </Routes>
-          <ScrollToTop />
-        </BrowserRouter>
-      </ThemeProvider>
+      <AuthProvider>
+        <CartProvider>
+          <ThemeProvider theme={theme}>
+            <BrowserRouter>
+              <GlobalStyle />
+              <ScrollFromStart />
+              <Routes>
+                <Route path="/" element={<Home />}></Route>
+                <Route path="/dashbord" element={<Dashboard />}></Route>
+                <Route path="/profile" element={<Profile />}></Route>
+                <Route path="/order" element={<Order />}></Route>
+                <Route
+                  path="/order/delivered"
+                  element={<OrderDelivered />}
+                ></Route>
+                {/* <Route
+                path="/order/process"
+                element={<OrderOnProgress />}
+              ></Route> */}
+                <Route
+                  path="/order/process"
+                  element={
+                    <PrivateRoute>
+                      <OrderOnProgress />
+                    </PrivateRoute>
+                  }
+                ></Route>
+                <Route path="/order/cancel" element={<OrderCanceled />}></Route>
+                <Route path="/login" element={<Login />}></Route>
+                <Route path="/registration" element={<Registration />}></Route>
+                <Route path="*" element={<ErrorImg />} />
+                <Route path="/processor" element={<Processor />}></Route>
+                <Route path="/motherboard" element={<Motherboard />}></Route>
+                <Route path="/ram" element={<Ram />}></Route>
+                <Route path="/tv" element={<Tv />}></Route>
+                <Route path="/camera" element={<Camera />}></Route>
+                <Route path="/headphones" element={<Headphones />}></Route>
+                <Route path="/smartphones" element={<Smartphones />}></Route>
+                <Route path="/music" element={<Music />}></Route>
+                <Route path="/accessories" element={<Accessories />}></Route>
+                <Route path="/clothing" element={<Clothing />}></Route>
+                <Route path="/personal" element={<Personal />}></Route>
+                <Route path="/grocery" element={<Grocery />}></Route>
+                <Route path="/detail" element={<ProductDetail />}></Route>
+                <Route path="/allproducts" element={<AllProducts />}></Route>
+                <Route path="/cart" element={<Cart />}></Route>
+                <Route path="/home2" element={<Home2 />}></Route>
+                <Route path="/home3" element={<Home3 />}></Route>
+                <Route path="/checkout" element={<Checkout />}></Route>
+                <Route path="/test" element={<Test />}></Route>
+                <Route path="/product" element={<Product />}></Route>
+              </Routes>
+              <ScrollToTop />
+            </BrowserRouter>
+          </ThemeProvider>
+        </CartProvider>
+      </AuthProvider>
     </>
   );
 }

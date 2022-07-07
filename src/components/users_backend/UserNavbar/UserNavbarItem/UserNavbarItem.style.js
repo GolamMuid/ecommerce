@@ -100,9 +100,10 @@ export const DropPicSize = styled.div`
 export const NameSize = styled.h5`
   text-align: center;
 `;
-export const MenuNameSize = styled.h4`
+export const MenuNameSize = styled.div`
   text-align: left;
   color: "black";
+  cursor: pointer;
 `;
 export const IdSize = styled.h6`
   text-align: center;
@@ -111,6 +112,16 @@ export const ProfileButton = styled.button`
   text-align: center;
   background: #0b7dda;
   border: none;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.4rem;
+`;
+export const LogOutButton = styled.button`
+  text-align: center;
+  background: #ffffff;
+  cursor: pointer;
+  border: none;
+  border: 1px solid red;
   border-radius: 1rem;
   margin-top: 0.5rem;
   padding: 0.4rem;

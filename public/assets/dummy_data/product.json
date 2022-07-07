@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "category": "clothing",
+    "name": "Denim Pant",
+    "oldPrice": "99",
+    "currentPrice": "79",
+    "image": "assets/images/Recent Products/denim.png"
+  },
+  {
+    "id": "2",
+    "category": "sport",
+    "name": "Casual Red Bag",
+    "oldPrice": "199",
+    "currentPrice": "179",
+    "image": "assets/images/Recent Products/bag.png"
+  },
+  {
+    "id": "3",
+    "category": "gadgets",
+    "name": "Beats Headphones",
+    "oldPrice": "499",
+    "currentPrice": "459",
+    "image": "assets/images/Recent Products/beats.png"
+  },
+  {
+    "id": "4",
+    "category": "fruniture",
+    "name": "Ergonomic Chair",
+    "oldPrice": "199",
+    "currentPrice": "179",
+    "image": "assets/images/Recent Products/chair.png"
+  },
+  {
+    "id": "6",
+    "category": "Grocery",
+    "name": "Aarong Mozzarella Cheese",
+    "oldPrice": "49",
+    "currentPrice": "39",
+    "image": "assets/images/Recent Products/cheese.png"
+  },
+  {
+    "id": "6",
+    "category": "Sports",
+    "name": "Brazil Football Jersey",
+    "oldPrice": "99",
+    "currentPrice": "79",
+    "image": "assets/images/Recent Products/jersey.png"
+  }
+]

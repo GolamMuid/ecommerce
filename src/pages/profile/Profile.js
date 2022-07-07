@@ -1,13 +1,15 @@
 import React from "react";
-import UserBlankSpace from "../../components/users_backend/UserBlankSpace/UserBlankSpace";
-import UserNavbar from "../../components/users_backend/UserNavbar/UserNavbar";
+import Navbar from "../../components/Navbar/Navbar";
+import BlankSpace from "../../components/Other Components/BlankSpace";
+// import UserNavbar from "../../components/users_backend/UserNavbar/UserNavbar";
 import UserProfile from "../../components/users_backend/UserProfile/UserProfile/UserProfile";
 
 function Profile() {
   return (
     <>
-      <UserNavbar />
-      <UserBlankSpace />
+      {/* <UserNavbar /> */}
+      <Navbar />
+      <BlankSpace />
       <UserProfile />
     </>
   );

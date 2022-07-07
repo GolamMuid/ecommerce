@@ -5,20 +5,23 @@ const jump = keyframes`
     transform: translateY(0)
   }
   to{
-    transform: translateY(-3px)
+    transform: translateY(-0.188)
   }
 `;
 
 export const LoginWrapper = styled.section`
+  /* border: 2px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 5rem;
   height: 100%;
   width: 100%;
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
 `;
 
 export const MainContainer = styled.div`
+  /* border: 2px solid green; */
   display: grid;
   gap: 0.3rem;
   align-items: center;
@@ -29,6 +32,7 @@ export const MainContainer = styled.div`
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  /* max-width: 100px; */
 
   @media only screen and (max-width: 768px) {
   }
@@ -73,6 +77,23 @@ export const Input = styled.input`
 `;
 
 export const SubmitButton = styled.input`
+  background: linear-gradient(to right, #14163c 0%, #03217b 79%);
+  text-transform: uppercase;
+  padding: 0.5rem 3rem;
+  border: none;
+  color: white;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  display: block;
+  /* margin: 0.5rem 2rem 0.5rem 5rem; */
+  margin: auto;
+  :hover {
+    background: rgb(0, 100, 0);
+    animation: ${jump} 0.2s ease-out forwards;
+  }
+`;
+export const LoginButton = styled.button`
   background: linear-gradient(to right, #14163c 0%, #03217b 79%);
   text-transform: uppercase;
   padding: 0.5rem 3rem;

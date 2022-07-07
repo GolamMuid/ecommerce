@@ -18,12 +18,15 @@ import { IoIosArrowDown } from "react-icons/io";
 import { BiLogOut } from "react-icons/bi";
 import { FiSettings } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import useAuth from "../../../../hooks/useAuth";
 
 const UserNavbarItem = () => {
+  const { Logout } = useAuth();
+
   return (
     <UserNavbarItemContainer>
       <NavPicSize>
-        <img src={image1} alt="" srcset="" />
+        <img src={image1} alt="" />
         <IoIosArrowDown />
       </NavPicSize>
 
@@ -31,7 +34,7 @@ const UserNavbarItem = () => {
         <ProfileContainer>
           <PicturePart>
             <DropPicSize>
-              <img src={image1} alt="" srcset="" />
+              <img src={image1} alt="" />
             </DropPicSize>
             <NameSize>Mahfuz Islam</NameSize>
             <IdSize>ID: 456734673</IdSize>
@@ -50,11 +53,10 @@ const UserNavbarItem = () => {
             <MenuNameSize>
               <FiSettings /> Setting
             </MenuNameSize>
-            <MenuNameSize>
+            <MenuNameSize onClick={Logout}>
               <BiLogOut />
-              <Link style={{ color: "black" }} to="/">
-                Logout
-              </Link>
+              Logout
+              {/* <LogOutButton onClick={Logout}>Logout</LogOutButton> */}
             </MenuNameSize>
           </LogoutPart>
         </ProfileContainer>

@@ -5,12 +5,12 @@ export const ProfilePartHeadigContainer = styled.div`
   padding: 1rem;
   grid-template-columns: 0.8fr 2fr 1.2fr;
   gap: 0.5rem;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   background: transparent;
 
-  box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 15%);
-  -webkit-box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 15%);
-  -moz-box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 15%);
+  box-shadow: 0.3125rem 0.3125rem 0.3125rem 0.3125rem rgb(0 0 0 / 15%);
+  -webkit-box-shadow: 0.3125rem 0.3125rem 0.3125rem 0.3125rem rgb(0 0 0 / 15%);
+  -moz-box-shadow: 0.3125rem 0.3125rem 0.3125rem 0.3125rem rgb(0 0 0 / 15%);
 `;
 
 export const PicSize = styled.div`

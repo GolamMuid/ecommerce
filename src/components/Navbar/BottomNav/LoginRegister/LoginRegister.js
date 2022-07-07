@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import LoginRegisterContainer from "./LoginRegister.style";
-import { Link } from "react-router-dom";
+
+import UserLogin from "../../../users_backend/UserLogin/UserLogin";
+import LoginModal from "../../../users_backend/UserLogin/LoginModal/LoginModal";
 
 function LoginRegister() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const hideModal = () => {
+    setIsOpen(false);
+  };
   return (
     <>
-      <LoginRegisterContainer>
-        <Link to="/login"> Login </Link>
+      <LoginRegisterContainer onClick={() => setIsOpen(!isOpen)}>
+        {/* <Link to="/login"> Login </Link> */}
+        Login
       </LoginRegisterContainer>
+      <LoginModal show={isOpen} handleClose={hideModal}>
+        <UserLogin />
+      </LoginModal>
     </>
   );
 }

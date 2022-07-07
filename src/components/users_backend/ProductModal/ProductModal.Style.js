@@ -23,11 +23,17 @@ export const ContentConainer = styled.div`
   transform: translate(-50%, -50%);
 `;
 export const CloseButton = styled.button`
-  padding: 0.2rem 1.2rem;
-  background: #d11a2a;
-  margin-top: 1rem;
-  color: #ffffff;
+  position: absolute;
+  right: 1.5rem;
+  top: 0;
+  font-size: 2.2rem;
+  font-weight: bold;
+  background: none;
   border: none;
+  &:hover {
+    color: red;
+    cursor: pointer;
+  }
 `;
 export const ModalDetailContainer = styled.div`
   display: grid;

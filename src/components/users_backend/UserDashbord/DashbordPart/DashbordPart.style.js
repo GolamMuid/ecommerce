@@ -15,6 +15,8 @@ export const DashbordCardContainer = styled.div`
   padding: 0.1rem;
   @media (max-width: 768px) {
     margin-left: 68px;
+
+    margin-top: -2.5rem;
   }
 `;
 export const DashbordTotalCard = styled.div`
